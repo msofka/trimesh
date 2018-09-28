@@ -1,0 +1,716 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>trimesh.ray package &mdash; trimesh 2.33.43 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> trimesh
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.33.43
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Advanced Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Module Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="trimesh.html">trimesh package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="trimesh.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="trimesh.interfaces.html">trimesh.interfaces package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.io.html">trimesh.io package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.path.html">trimesh.path package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">trimesh.ray package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.resources.html">trimesh.resources package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.scene.html">trimesh.scene package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.base">trimesh.base module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.boolean">trimesh.boolean module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.bounds">trimesh.bounds module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.caching">trimesh.caching module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.collision">trimesh.collision module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.comparison">trimesh.comparison module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.constants">trimesh.constants module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.convex">trimesh.convex module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.creation">trimesh.creation module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.curvature">trimesh.curvature module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.decomposition">trimesh.decomposition module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.geometry">trimesh.geometry module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.graph">trimesh.graph module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.grouping">trimesh.grouping module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.inertia">trimesh.inertia module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.integrate">trimesh.integrate module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.intersections">trimesh.intersections module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.nsphere">trimesh.nsphere module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.permutate">trimesh.permutate module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.points">trimesh.points module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.poses">trimesh.poses module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.primitives">trimesh.primitives module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.proximity">trimesh.proximity module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.registration">trimesh.registration module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.remesh">trimesh.remesh module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.rendering">trimesh.rendering module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.repair">trimesh.repair module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.sample">trimesh.sample module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.transformations">trimesh.transformations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.triangles">trimesh.triangles module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.units">trimesh.units module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.util">trimesh.util module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.version">trimesh.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.visual">trimesh.visual module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.voxel">trimesh.voxel module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">trimesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Module Reference</a> &raquo;</li>
+        
+          <li><a href="trimesh.html">trimesh package</a> &raquo;</li>
+        
+      <li>trimesh.ray package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/trimesh.ray.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="trimesh-ray-package">
+<h1>trimesh.ray package<a class="headerlink" href="#trimesh-ray-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-trimesh.ray.ray_pyembree">
+<span id="trimesh-ray-ray-pyembree-module"></span><h2>trimesh.ray.ray_pyembree module<a class="headerlink" href="#module-trimesh.ray.ray_pyembree" title="Permalink to this headline">¶</a></h2>
+<p>Ray queries using the pyembree package with the
+API wrapped to match our native raytracer.</p>
+<dl class="class">
+<dt id="trimesh.ray.ray_pyembree.RayMeshIntersector">
+<em class="property">class </em><code class="descclassname">trimesh.ray.ray_pyembree.</code><code class="descname">RayMeshIntersector</code><span class="sig-paren">(</span><em>geometry</em>, <em>scale_to_box=True</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.ray.ray_pyembree.RayMeshIntersector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#trimesh.ray.ray_pyembree.RayMeshIntersector.contains_points" title="trimesh.ray.ray_pyembree.RayMeshIntersector.contains_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">contains_points</span></code></a>(points)</td>
+<td>Check if a mesh contains a list of points, using ray tests.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.ray.ray_pyembree.RayMeshIntersector.intersects_any" title="trimesh.ray.ray_pyembree.RayMeshIntersector.intersects_any"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersects_any</span></code></a>(ray_origins,&nbsp;ray_directions)</td>
+<td>Check if a list of rays hits the surface.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#trimesh.ray.ray_pyembree.RayMeshIntersector.intersects_first" title="trimesh.ray.ray_pyembree.RayMeshIntersector.intersects_first"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersects_first</span></code></a>(ray_origins,&nbsp;ray_directions)</td>
+<td>Find the index of the first triangle a ray hits.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.ray.ray_pyembree.RayMeshIntersector.intersects_id" title="trimesh.ray.ray_pyembree.RayMeshIntersector.intersects_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersects_id</span></code></a>(ray_origins,&nbsp;ray_directions[,&nbsp;…])</td>
+<td>Find the triangles hit by a list of rays, including optionally multiple hits along a single ray.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#trimesh.ray.ray_pyembree.RayMeshIntersector.intersects_location" title="trimesh.ray.ray_pyembree.RayMeshIntersector.intersects_location"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersects_location</span></code></a>(ray_origins,&nbsp;ray_directions)</td>
+<td>Return the location of where a ray hits a surface.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trimesh.ray.ray_pyembree.RayMeshIntersector.contains_points">
+<code class="descname">contains_points</code><span class="sig-paren">(</span><em>points</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.ray.ray_pyembree.RayMeshIntersector.contains_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a mesh contains a list of points, using ray tests.</p>
+<p>If the point is on the surface of the mesh, behavior is undefined.</p>
+<p>points: (n,3) points in space</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>contains: (n,) bool</strong></dt>
+<dd><p class="first last">Whether point is inside mesh or not</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.ray.ray_pyembree.RayMeshIntersector.intersects_any">
+<code class="descname">intersects_any</code><span class="sig-paren">(</span><em>ray_origins</em>, <em>ray_directions</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.ray.ray_pyembree.RayMeshIntersector.intersects_any" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a list of rays hits the surface.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>ray_origins:    (n,3) float, origins of rays</strong></dt>
+<dd></dd>
+<dt><strong>ray_directions: (n,3) float, direction (vector) of rays</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>hit:            (n,) bool, did each ray hit the surface</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.ray.ray_pyembree.RayMeshIntersector.intersects_first">
+<code class="descname">intersects_first</code><span class="sig-paren">(</span><em>ray_origins</em>, <em>ray_directions</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.ray.ray_pyembree.RayMeshIntersector.intersects_first" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the index of the first triangle a ray hits.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>ray_origins:    (n,3) float, origins of rays</strong></dt>
+<dd></dd>
+<dt><strong>ray_directions: (n,3) float, direction (vector) of rays</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>triangle_index: (n,) int, index of triangle ray hit, or -1 if not hit</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.ray.ray_pyembree.RayMeshIntersector.intersects_id">
+<code class="descname">intersects_id</code><span class="sig-paren">(</span><em>ray_origins</em>, <em>ray_directions</em>, <em>multiple_hits=True</em>, <em>max_hits=20</em>, <em>return_locations=False</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.ray.ray_pyembree.RayMeshIntersector.intersects_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the triangles hit by a list of rays, including
+optionally multiple hits along a single ray.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>ray_origins:      (n,3) float, origins of rays</strong></dt>
+<dd></dd>
+<dt><strong>ray_directions:   (n,3) float, direction (vector) of rays</strong></dt>
+<dd></dd>
+<dt><strong>multiple_hits:    bool, if True will return every hit along the ray</strong></dt>
+<dd><p class="first last">if False will only return first hit</p>
+</dd>
+<dt><strong>return_locations: bool, should we return hit locations or not</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>index_tri: (m,) int, index of triangle the ray hit</strong></dt>
+<dd></dd>
+<dt><strong>index_ray: (m,) int, index of ray</strong></dt>
+<dd></dd>
+<dt><strong>locations: (m,3) float, locations in space</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.ray.ray_pyembree.RayMeshIntersector.intersects_location">
+<code class="descname">intersects_location</code><span class="sig-paren">(</span><em>ray_origins</em>, <em>ray_directions</em>, <em>multiple_hits=True</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.ray.ray_pyembree.RayMeshIntersector.intersects_location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the location of where a ray hits a surface.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>ray_origins:    (n,3) float, origins of rays</strong></dt>
+<dd></dd>
+<dt><strong>ray_directions: (n,3) float, direction (vector) of rays</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>locations: (n) sequence of (m,3) intersection points</strong></dt>
+<dd></dd>
+<dt><strong>index_ray: (n,) int, list of ray index</strong></dt>
+<dd></dd>
+<dt><strong>index_tri: (n,) int, list of triangle (face) indexes</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-trimesh.ray.ray_triangle">
+<span id="trimesh-ray-ray-triangle-module"></span><h2>trimesh.ray.ray_triangle module<a class="headerlink" href="#module-trimesh.ray.ray_triangle" title="Permalink to this headline">¶</a></h2>
+<p>A basic slow implementation of ray- triangle queries.</p>
+<dl class="class">
+<dt id="trimesh.ray.ray_triangle.RayMeshIntersector">
+<em class="property">class </em><code class="descclassname">trimesh.ray.ray_triangle.</code><code class="descname">RayMeshIntersector</code><span class="sig-paren">(</span><em>mesh</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.ray.ray_triangle.RayMeshIntersector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>An object to query a mesh for ray intersections.
+Precomputes an r-tree for each triangle on the mesh.</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#trimesh.ray.ray_triangle.RayMeshIntersector.contains_points" title="trimesh.ray.ray_triangle.RayMeshIntersector.contains_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">contains_points</span></code></a>(points)</td>
+<td>Check if a mesh contains a list of points, using ray tests.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.ray.ray_triangle.RayMeshIntersector.intersects_any" title="trimesh.ray.ray_triangle.RayMeshIntersector.intersects_any"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersects_any</span></code></a>(ray_origins,&nbsp;ray_directions,&nbsp;…)</td>
+<td>Find out if each ray hit any triangle on the mesh.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#trimesh.ray.ray_triangle.RayMeshIntersector.intersects_id" title="trimesh.ray.ray_triangle.RayMeshIntersector.intersects_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersects_id</span></code></a>(ray_origins,&nbsp;ray_directions[,&nbsp;…])</td>
+<td>Find the intersections between the current mesh and a list of rays.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.ray.ray_triangle.RayMeshIntersector.intersects_location" title="trimesh.ray.ray_triangle.RayMeshIntersector.intersects_location"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersects_location</span></code></a>(ray_origins,&nbsp;…)</td>
+<td>Return unique cartesian locations where rays hit the mesh.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trimesh.ray.ray_triangle.RayMeshIntersector.contains_points">
+<code class="descname">contains_points</code><span class="sig-paren">(</span><em>points</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.ray.ray_triangle.RayMeshIntersector.contains_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a mesh contains a list of points, using ray tests.</p>
+<p>If the point is on the surface of the mesh, behavior is undefined.</p>
+<p>points: (n,3) points in space</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>contains: (n) boolean array, whether point is inside mesh or not</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.ray.ray_triangle.RayMeshIntersector.intersects_any">
+<code class="descname">intersects_any</code><span class="sig-paren">(</span><em>ray_origins</em>, <em>ray_directions</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.ray.ray_triangle.RayMeshIntersector.intersects_any" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find out if each ray hit any triangle on the mesh.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>ray_origins:      (m,3) float, ray origin points</strong></dt>
+<dd></dd>
+<dt><strong>ray_directions:   (m,3) float, ray direction vectors</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>hit: boolean, whether any ray hit any triangle on the mesh</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.ray.ray_triangle.RayMeshIntersector.intersects_id">
+<code class="descname">intersects_id</code><span class="sig-paren">(</span><em>ray_origins</em>, <em>ray_directions</em>, <em>return_locations=False</em>, <em>multiple_hits=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.ray.ray_triangle.RayMeshIntersector.intersects_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the intersections between the current mesh and a list of rays.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>ray_origins:      (m,3) float, ray origin points</strong></dt>
+<dd></dd>
+<dt><strong>ray_directions:   (m,3) float, ray direction vectors</strong></dt>
+<dd></dd>
+<dt><strong>multiple_hits:    bool, consider multiple hits of each ray or not</strong></dt>
+<dd></dd>
+<dt><strong>return_locations: bool, return hit locations or not</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>index_triangle: (h,) int,    index of triangles hit</strong></dt>
+<dd></dd>
+<dt><strong>index_ray:      (h,) int,    index of ray that hit triangle</strong></dt>
+<dd></dd>
+<dt><strong>locations:      (h,3) float, (optional) position of intersection in space</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.ray.ray_triangle.RayMeshIntersector.intersects_location">
+<code class="descname">intersects_location</code><span class="sig-paren">(</span><em>ray_origins</em>, <em>ray_directions</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.ray.ray_triangle.RayMeshIntersector.intersects_location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return unique cartesian locations where rays hit the mesh.
+If you are counting the number of hits a ray had, this method
+should be used as if only the triangle index is used on- edge hits
+will be counted twice.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>ray_origins:      (m,3) float, ray origin points</strong></dt>
+<dd></dd>
+<dt><strong>ray_directions:   (m,3) float, ray direction vectors</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>locations: (n) sequence of (m,3) intersection points</strong></dt>
+<dd></dd>
+<dt><strong>index_ray: (n,) int, list of ray index</strong></dt>
+<dd></dd>
+<dt><strong>index_tri: (n,) int, list of triangle (face) indexes</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.ray.ray_triangle.ray_bounds">
+<code class="descclassname">trimesh.ray.ray_triangle.</code><code class="descname">ray_bounds</code><span class="sig-paren">(</span><em>ray_origins</em>, <em>ray_directions</em>, <em>bounds</em>, <em>buffer_dist=1e-05</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.ray.ray_triangle.ray_bounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a set of rays and a bounding box for the volume of interest
+where the rays will be passing through, find the bounding boxes
+of the rays as they pass through the volume.</p>
+<p>ray_origins:      (m,3) float, ray origin points
+ray_directions:   (m,3) float, ray direction vectors
+bounds:           (2,3) bounding box (min, max)
+buffer_dist:      float, distance to pad zero width bounding boxes</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>ray_bounding: (n) set of AABB of rays passing through volume</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.ray.ray_triangle.ray_triangle_candidates">
+<code class="descclassname">trimesh.ray.ray_triangle.</code><code class="descname">ray_triangle_candidates</code><span class="sig-paren">(</span><em>ray_origins</em>, <em>ray_directions</em>, <em>tree</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.ray.ray_triangle.ray_triangle_candidates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do broad- phase search for triangles that the rays
+may intersect.</p>
+<p>Does this by creating a bounding box for the ray as it
+passes through the volume occupied by the tree</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>ray_origins:      (m,3) float, ray origin points</strong></dt>
+<dd></dd>
+<dt><strong>ray_directions:   (m,3) float, ray direction vectors</strong></dt>
+<dd></dd>
+<dt><strong>tree:             rtree object, contains AABB of each triangle</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>ray_candidates: (n,) int, triangle indexes</strong></dt>
+<dd></dd>
+<dt><strong>ray_id:         (n,) int, corresponding ray index for a triangle candidate</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.ray.ray_triangle.ray_triangle_id">
+<code class="descclassname">trimesh.ray.ray_triangle.</code><code class="descname">ray_triangle_id</code><span class="sig-paren">(</span><em>triangles</em>, <em>ray_origins</em>, <em>ray_directions</em>, <em>triangles_normal=None</em>, <em>tree=None</em>, <em>multiple_hits=True</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.ray.ray_triangle.ray_triangle_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the intersections between a group of triangles and rays</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>triangles:        (n,3,3) float, triangles in space</strong></dt>
+<dd></dd>
+<dt><strong>ray_origins:      (m,3) float, ray origin points</strong></dt>
+<dd></dd>
+<dt><strong>ray_directions:   (m,3) float, ray direction vectors</strong></dt>
+<dd></dd>
+<dt><strong>triangles_normal: (n,3) float, normal vector of triangles, optional</strong></dt>
+<dd></dd>
+<dt><strong>tree:             rtree object holding triangle bounds</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>index_triangle: (h,) int,    index of triangles hit</strong></dt>
+<dd></dd>
+<dt><strong>index_ray:      (h,) int,    index of ray that hit triangle</strong></dt>
+<dd></dd>
+<dt><strong>locations:      (h,3) float, position of intersection in space</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-trimesh.ray.ray_util">
+<span id="trimesh-ray-ray-util-module"></span><h2>trimesh.ray.ray_util module<a class="headerlink" href="#module-trimesh.ray.ray_util" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="trimesh.ray.ray_util.contains_points">
+<code class="descclassname">trimesh.ray.ray_util.</code><code class="descname">contains_points</code><span class="sig-paren">(</span><em>intersector</em>, <em>points</em>, <em>check_direction=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.ray.ray_util.contains_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a mesh contains a set of points, using ray tests.</p>
+<p>If the point is on the surface of the mesh, behavior is
+undefined.</p>
+<p>mesh: Trimesh object
+points: (n,3) points in space</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>contains</strong> <span class="classifier-delimiter">:</span> <span class="classifier">(n) bool</span></dt>
+<dd><p class="first last">Whether point is inside mesh or not</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-trimesh.ray">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-trimesh.ray" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Michael Dawson-Haggerty.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.33.43',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,2412 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>trimesh.scene package &mdash; trimesh 2.33.43 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="trimesh.resources package" href="trimesh.resources.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> trimesh
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.33.43
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Advanced Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Module Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="trimesh.html">trimesh package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="trimesh.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="trimesh.interfaces.html">trimesh.interfaces package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.io.html">trimesh.io package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.path.html">trimesh.path package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.ray.html">trimesh.ray package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.resources.html">trimesh.resources package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">trimesh.scene package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.base">trimesh.base module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.boolean">trimesh.boolean module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.bounds">trimesh.bounds module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.caching">trimesh.caching module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.collision">trimesh.collision module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.comparison">trimesh.comparison module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.constants">trimesh.constants module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.convex">trimesh.convex module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.creation">trimesh.creation module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.curvature">trimesh.curvature module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.decomposition">trimesh.decomposition module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.geometry">trimesh.geometry module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.graph">trimesh.graph module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.grouping">trimesh.grouping module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.inertia">trimesh.inertia module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.integrate">trimesh.integrate module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.intersections">trimesh.intersections module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.nsphere">trimesh.nsphere module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.permutate">trimesh.permutate module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.points">trimesh.points module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.poses">trimesh.poses module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.primitives">trimesh.primitives module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.proximity">trimesh.proximity module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.registration">trimesh.registration module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.remesh">trimesh.remesh module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.rendering">trimesh.rendering module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.repair">trimesh.repair module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.sample">trimesh.sample module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.transformations">trimesh.transformations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.triangles">trimesh.triangles module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.units">trimesh.units module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.util">trimesh.util module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.version">trimesh.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.visual">trimesh.visual module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.voxel">trimesh.voxel module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">trimesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Module Reference</a> &raquo;</li>
+        
+          <li><a href="trimesh.html">trimesh package</a> &raquo;</li>
+        
+      <li>trimesh.scene package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/trimesh.scene.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="trimesh-scene-package">
+<h1>trimesh.scene package<a class="headerlink" href="#trimesh-scene-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-trimesh.scene.scene">
+<span id="trimesh-scene-scene-module"></span><h2>trimesh.scene.scene module<a class="headerlink" href="#module-trimesh.scene.scene" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="trimesh.scene.scene.Scene">
+<em class="property">class </em><code class="descclassname">trimesh.scene.scene.</code><code class="descname">Scene</code><span class="sig-paren">(</span><em>geometry=None</em>, <em>base_frame='world'</em>, <em>metadata={}</em>, <em>graph=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.scene.Scene" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A simple scene graph which can be rendered directly via
+pyglet/openGL or through other endpoints such as a
+raytracer. Meshes are added by name, which can then be
+moved by updating transform in the transform tree.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><a class="reference internal" href="#trimesh.scene.scene.Scene.bounding_box" title="trimesh.scene.scene.Scene.bounding_box"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bounding_box</span></code></a></dt>
+<dd><p class="first last">An axis aligned bounding box for the current scene.</p>
+</dd>
+<dt><a class="reference internal" href="#trimesh.scene.scene.Scene.bounding_box_oriented" title="trimesh.scene.scene.Scene.bounding_box_oriented"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bounding_box_oriented</span></code></a></dt>
+<dd><p class="first last">An oriented bounding box for the current mesh.</p>
+</dd>
+<dt><a class="reference internal" href="#trimesh.scene.scene.Scene.bounds" title="trimesh.scene.scene.Scene.bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bounds</span></code></a></dt>
+<dd><p class="first last">Return the overall bounding box of the scene.</p>
+</dd>
+<dt><a class="reference internal" href="#trimesh.scene.scene.Scene.bounds_corners" title="trimesh.scene.scene.Scene.bounds_corners"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bounds_corners</span></code></a></dt>
+<dd><p class="first last">A list of points that represent the corners of the AABB of every geometry in the scene.</p>
+</dd>
+<dt><a class="reference internal" href="#trimesh.scene.scene.Scene.centroid" title="trimesh.scene.scene.Scene.centroid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">centroid</span></code></a></dt>
+<dd><p class="first last">Return the center of the bounding box for the scene.</p>
+</dd>
+<dt><a class="reference internal" href="#trimesh.scene.scene.Scene.convex_hull" title="trimesh.scene.scene.Scene.convex_hull"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convex_hull</span></code></a></dt>
+<dd><p class="first last">The convex hull of the whole scene</p>
+</dd>
+<dt><a class="reference internal" href="#trimesh.scene.scene.Scene.duplicate_nodes" title="trimesh.scene.scene.Scene.duplicate_nodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">duplicate_nodes</span></code></a></dt>
+<dd><p class="first last">Return a sequence of node keys of identical meshes.</p>
+</dd>
+<dt><a class="reference internal" href="#trimesh.scene.scene.Scene.extents" title="trimesh.scene.scene.Scene.extents"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extents</span></code></a></dt>
+<dd><p class="first last">Return the axis aligned box size of the current scene.</p>
+</dd>
+<dt><a class="reference internal" href="#trimesh.scene.scene.Scene.geometry_identifiers" title="trimesh.scene.scene.Scene.geometry_identifiers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geometry_identifiers</span></code></a></dt>
+<dd><p class="first last">Look up geometries by identifier MD5</p>
+</dd>
+<dt><a class="reference internal" href="#trimesh.scene.scene.Scene.is_empty" title="trimesh.scene.scene.Scene.is_empty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_empty</span></code></a></dt>
+<dd><p class="first last">Does the scene have anything in it.</p>
+</dd>
+<dt><a class="reference internal" href="#trimesh.scene.scene.Scene.scale" title="trimesh.scene.scene.Scene.scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale</span></code></a></dt>
+<dd><p class="first last">The approximate scale of the mesh</p>
+</dd>
+<dt><a class="reference internal" href="#trimesh.scene.scene.Scene.triangles" title="trimesh.scene.scene.Scene.triangles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangles</span></code></a></dt>
+<dd><p class="first last">Return a correctly transformed polygon soup of the current scene.</p>
+</dd>
+<dt><a class="reference internal" href="#trimesh.scene.scene.Scene.triangles_node" title="trimesh.scene.scene.Scene.triangles_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangles_node</span></code></a></dt>
+<dd><p class="first last">Which node of self.graph does each triangle come from.</p>
+</dd>
+<dt><a class="reference internal" href="#trimesh.scene.scene.Scene.units" title="trimesh.scene.scene.Scene.units"><code class="xref py py-obj docutils literal notranslate"><span class="pre">units</span></code></a></dt>
+<dd><p class="first last">Get the units for every model in the scene, and raise a ValueError if there are mixed units.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#trimesh.scene.scene.Scene.add_geometry" title="trimesh.scene.scene.Scene.add_geometry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_geometry</span></code></a>(geometry[,&nbsp;node_name])</td>
+<td>Add a geometry to the scene.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.scene.scene.Scene.convert_units" title="trimesh.scene.scene.Scene.convert_units"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_units</span></code></a>(desired[,&nbsp;guess])</td>
+<td>If geometry has units defined convert them to new units.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#trimesh.scene.scene.Scene.copy" title="trimesh.scene.scene.Scene.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</td>
+<td>Return a deep copy of the current scene</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.scene.scene.Scene.dump" title="trimesh.scene.scene.Scene.dump"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dump</span></code></a>()</td>
+<td>Append all meshes in scene to a list of meshes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#trimesh.scene.scene.Scene.explode" title="trimesh.scene.scene.Scene.explode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">explode</span></code></a>([vector,&nbsp;origin])</td>
+<td>Explode a scene around a point and vector.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.scene.scene.Scene.export" title="trimesh.scene.scene.Scene.export"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export</span></code></a>([file_type])</td>
+<td>Export a snapshot of the current scene.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#trimesh.scene.scene.Scene.md5" title="trimesh.scene.scene.Scene.md5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">md5</span></code></a>()</td>
+<td>MD5 of scene which will change when meshes or transforms are changed</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.scene.scene.Scene.rezero" title="trimesh.scene.scene.Scene.rezero"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rezero</span></code></a>()</td>
+<td>Move the current scene so that the AABB of the whole scene is centered at the origin.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#trimesh.scene.scene.Scene.save_image" title="trimesh.scene.scene.Scene.save_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_image</span></code></a>([resolution])</td>
+<td>Get a PNG image of a scene.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.scene.scene.Scene.scaled" title="trimesh.scene.scene.Scene.scaled"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scaled</span></code></a>(scale)</td>
+<td>Return a copy of the current scene, with meshes and scene graph transforms scaled to the requested factor.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#trimesh.scene.scene.Scene.set_camera" title="trimesh.scene.scene.Scene.set_camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_camera</span></code></a>([angles,&nbsp;distance,&nbsp;center])</td>
+<td>Add a transform to self.graph for ‘camera’</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.scene.scene.Scene.show" title="trimesh.scene.scene.Scene.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>([viewer])</td>
+<td>Display the current scene.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trimesh.scene.scene.Scene.add_geometry">
+<code class="descname">add_geometry</code><span class="sig-paren">(</span><em>geometry</em>, <em>node_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.scene.Scene.add_geometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a geometry to the scene.</p>
+<p>If the mesh has multiple transforms defined in its
+metadata, they will all be copied into the
+TransformForest of the current scene automatically.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>geometry: Trimesh, Path3D, or list of same</strong></dt>
+<dd></dd>
+<dt><strong>node_name: name in the scene graph</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>node_name: str, name of node in self.graph</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trimesh.scene.scene.Scene.bounding_box">
+<code class="descname">bounding_box</code><a class="headerlink" href="#trimesh.scene.scene.Scene.bounding_box" title="Permalink to this definition">¶</a></dt>
+<dd><p>An axis aligned bounding box for the current scene.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>aabb: trimesh.primitives.Box object with transform and extents defined</strong></dt>
+<dd><p class="first last">to represent the axis aligned bounding box of the scene</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trimesh.scene.scene.Scene.bounding_box_oriented">
+<code class="descname">bounding_box_oriented</code><a class="headerlink" href="#trimesh.scene.scene.Scene.bounding_box_oriented" title="Permalink to this definition">¶</a></dt>
+<dd><p>An oriented bounding box for the current mesh.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>obb</strong> <span class="classifier-delimiter">:</span> <span class="classifier">trimesh.primitives.Box</span></dt>
+<dd><p class="first last">Box primitive with transform and extents defined
+to represent the minimum volume oriented bounding
+box of the mesh</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trimesh.scene.scene.Scene.bounds">
+<code class="descname">bounds</code><a class="headerlink" href="#trimesh.scene.scene.Scene.bounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the overall bounding box of the scene.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>bounds: (2,3) float points for min, max corner</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trimesh.scene.scene.Scene.bounds_corners">
+<code class="descname">bounds_corners</code><a class="headerlink" href="#trimesh.scene.scene.Scene.bounds_corners" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of points that represent the corners of the
+AABB of every geometry in the scene.</p>
+<p>This can be useful if you want to take the AABB in
+a specific frame.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>corners: (n, 3) float, points in space</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trimesh.scene.scene.Scene.centroid">
+<code class="descname">centroid</code><a class="headerlink" href="#trimesh.scene.scene.Scene.centroid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the center of the bounding box for the scene.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>centroid: (3) float point for center of bounding box</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.scene.Scene.convert_units">
+<code class="descname">convert_units</code><span class="sig-paren">(</span><em>desired</em>, <em>guess=False</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.scene.Scene.convert_units" title="Permalink to this definition">¶</a></dt>
+<dd><p>If geometry has units defined convert them to new units.</p>
+<p>Returns a new scene with geometries and transforms scaled.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>desired</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Desired final unit system: ‘inches’, ‘mm’, etc.</p>
+</dd>
+<dt><strong>guess</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Is the converter allowed to guess scale when models
+don’t have it specified in their metadata.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>scaled</strong> <span class="classifier-delimiter">:</span> <span class="classifier">trimesh.Scene</span></dt>
+<dd><p class="first last">Copy of scene with scaling applied and units set
+for every model</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trimesh.scene.scene.Scene.convex_hull">
+<code class="descname">convex_hull</code><a class="headerlink" href="#trimesh.scene.scene.Scene.convex_hull" title="Permalink to this definition">¶</a></dt>
+<dd><p>The convex hull of the whole scene</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>hull: Trimesh object, convex hull of all meshes in scene</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.scene.Scene.copy">
+<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.scene.Scene.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a deep copy of the current scene</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>copied</strong> <span class="classifier-delimiter">:</span> <span class="classifier">trimesh.Scene</span></dt>
+<dd><p class="first last">Copy of the current scene</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.scene.Scene.dump">
+<code class="descname">dump</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.scene.Scene.dump" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append all meshes in scene to a list of meshes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>dumped: (n,) list, of Trimesh objects transformed to their</strong></dt>
+<dd><p class="first last">location the scene.graph</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trimesh.scene.scene.Scene.duplicate_nodes">
+<code class="descname">duplicate_nodes</code><a class="headerlink" href="#trimesh.scene.scene.Scene.duplicate_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a sequence of node keys of identical meshes.</p>
+<p>Will combine meshes duplicated by copying in space with different keys in
+self.geometry, as well as meshes repeated by self.nodes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>duplicates: (m) sequence of keys to self.nodes that represent</strong></dt>
+<dd><p class="first last">identical geometry</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.scene.Scene.explode">
+<code class="descname">explode</code><span class="sig-paren">(</span><em>vector=None</em>, <em>origin=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.scene.Scene.explode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Explode a scene around a point and vector.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>vector</strong> <span class="classifier-delimiter">:</span> <span class="classifier">(3,) float or float</span></dt>
+<dd><p class="first last">Explode radially around a direction vector or spherically</p>
+</dd>
+<dt><strong>origin</strong> <span class="classifier-delimiter">:</span> <span class="classifier">(3,) float</span></dt>
+<dd><p class="first last">Point to explode around</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.scene.Scene.export">
+<code class="descname">export</code><span class="sig-paren">(</span><em>file_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.scene.Scene.export" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export a snapshot of the current scene.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>file_type: what encoding to use for meshes</strong></dt>
+<dd><p class="first last">ie: dict, dict64, stl</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>export: dict with keys:</strong></dt>
+<dd><p class="first">meshes: list of meshes, encoded as per file_type
+transforms: edge list of transforms, eg:</p>
+<blockquote class="last">
+<div><p>((u, v, {‘matrix’ : np.eye(4)}))</p>
+</div></blockquote>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trimesh.scene.scene.Scene.extents">
+<code class="descname">extents</code><a class="headerlink" href="#trimesh.scene.scene.Scene.extents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the axis aligned box size of the current scene.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>extents: (3,) float, bounding box sides length</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trimesh.scene.scene.Scene.geometry_identifiers">
+<code class="descname">geometry_identifiers</code><a class="headerlink" href="#trimesh.scene.scene.Scene.geometry_identifiers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Look up geometries by identifier MD5</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>identifiers: dict, identifier md5: key in self.geometry</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trimesh.scene.scene.Scene.is_empty">
+<code class="descname">is_empty</code><a class="headerlink" href="#trimesh.scene.scene.Scene.is_empty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Does the scene have anything in it.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>is_empty: bool, True if nothing is in the scene</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.scene.Scene.md5">
+<code class="descname">md5</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.scene.Scene.md5" title="Permalink to this definition">¶</a></dt>
+<dd><p>MD5 of scene which will change when meshes or
+transforms are changed</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>hashed: str, MD5 hash of scene</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.scene.Scene.rezero">
+<code class="descname">rezero</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.scene.Scene.rezero" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move the current scene so that the AABB of the whole
+scene is centered at the origin.</p>
+<p>Does this by changing the base frame to a new, offset
+base frame.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.scene.Scene.save_image">
+<code class="descname">save_image</code><span class="sig-paren">(</span><em>resolution=(1024</em>, <em>768)</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.scene.Scene.save_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a PNG image of a scene.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>resolution: (2,) int, resolution to render image</strong></dt>
+<dd></dd>
+<dt><strong>**kwargs:  passed to SceneViewer constructor</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>png: bytes, render of scene in PNG form</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trimesh.scene.scene.Scene.scale">
+<code class="descname">scale</code><a class="headerlink" href="#trimesh.scene.scene.Scene.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>The approximate scale of the mesh</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>scale: float, the mean of the bounding box edge lengths</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.scene.Scene.scaled">
+<code class="descname">scaled</code><span class="sig-paren">(</span><em>scale</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.scene.Scene.scaled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a copy of the current scene, with meshes and scene graph
+transforms scaled to the requested factor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>scale</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Factor to scale meshes and transforms</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>scaled</strong> <span class="classifier-delimiter">:</span> <span class="classifier">trimesh.Scene</span></dt>
+<dd><p class="first last">A copy of the current scene but scaled</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.scene.Scene.set_camera">
+<code class="descname">set_camera</code><span class="sig-paren">(</span><em>angles=None</em>, <em>distance=None</em>, <em>center=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.scene.Scene.set_camera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a transform to self.graph for ‘camera’</p>
+<p>If arguments are not passed sane defaults will be figured out.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>angles</strong> <span class="classifier-delimiter">:</span> <span class="classifier">(3,) float</span></dt>
+<dd><p class="first last">Initial euler angles in radians</p>
+</dd>
+<dt><strong>distance:  float</strong></dt>
+<dd><p class="first last">Distance from centroid</p>
+</dd>
+<dt><strong>center:    (3,) float</strong></dt>
+<dd><p class="first last">Point camera should be center on</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.scene.Scene.show">
+<code class="descname">show</code><span class="sig-paren">(</span><em>viewer=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.scene.Scene.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display the current scene.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>viewer: str ‘gl’:       open a pyglet window</strong></dt>
+<dd><p class="first">str,’notebook’: return ipython.display.HTML
+None: automatically pick based on whether or not</p>
+<blockquote class="last">
+<div><p>we are in an ipython notebook</p>
+</div></blockquote>
+</dd>
+<dt><strong>smooth</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Turn on or off automatic smooth shading</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trimesh.scene.scene.Scene.triangles">
+<code class="descname">triangles</code><a class="headerlink" href="#trimesh.scene.scene.Scene.triangles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a correctly transformed polygon soup of the
+current scene.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>triangles: (n,3,3) float, triangles in space</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trimesh.scene.scene.Scene.triangles_node">
+<code class="descname">triangles_node</code><a class="headerlink" href="#trimesh.scene.scene.Scene.triangles_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which node of self.graph does each triangle come from.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>triangles_index</strong> <span class="classifier-delimiter">:</span> <span class="classifier">(len(self.triangles),)</span></dt>
+<dd><p class="first last">Node name for each triangle</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trimesh.scene.scene.Scene.units">
+<code class="descname">units</code><a class="headerlink" href="#trimesh.scene.scene.Scene.units" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the units for every model in the scene, and
+raise a ValueError if there are mixed units.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Units for every model in the scene</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.scene.scene.append_scenes">
+<code class="descclassname">trimesh.scene.scene.</code><code class="descname">append_scenes</code><span class="sig-paren">(</span><em>iterable, common=['world']</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.scene.append_scenes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Concatenate multiple scene objects into one scene.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>iterable</strong> <span class="classifier-delimiter">:</span> <span class="classifier">(n,) Trimesh or Scene</span></dt>
+<dd><p class="first last">Geometries that should be appended</p>
+</dd>
+<dt><strong>common</strong> <span class="classifier-delimiter">:</span> <span class="classifier">(n,) str</span></dt>
+<dd><p class="first last">Nodes that shouldn’t be remapped</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>result</strong> <span class="classifier-delimiter">:</span> <span class="classifier">trimesh.Scene</span></dt>
+<dd><p class="first last">Scene containing all geometry</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.scene.scene.split_scene">
+<code class="descclassname">trimesh.scene.scene.</code><code class="descname">split_scene</code><span class="sig-paren">(</span><em>geometry</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.scene.split_scene" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a geometry, list of geometries, or a Scene
+return them as a single Scene object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>geometry</strong> <span class="classifier-delimiter">:</span> <span class="classifier">splittable</span></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>scene: trimesh.Scene</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-trimesh.scene.transforms">
+<span id="trimesh-scene-transforms-module"></span><h2>trimesh.scene.transforms module<a class="headerlink" href="#module-trimesh.scene.transforms" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="trimesh.scene.transforms.EnforcedForest">
+<em class="property">class </em><code class="descclassname">trimesh.scene.transforms.</code><code class="descname">EnforcedForest</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.EnforcedForest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">networkx.classes.digraph.DiGraph</span></code></p>
+<p>A subclass of networkx.DiGraph that will raise an error if an
+edge is added which would make the DiGraph not a forest or tree.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>name</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_cycle</span></code>(nodes,&nbsp;**attr)</td>
+<td>Add a cycle.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.scene.transforms.EnforcedForest.add_edge" title="trimesh.scene.transforms.EnforcedForest.add_edge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_edge</span></code></a>(u,&nbsp;v,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Add an edge between u and v.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#trimesh.scene.transforms.EnforcedForest.add_edges_from" title="trimesh.scene.transforms.EnforcedForest.add_edges_from"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_edges_from</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Add all the edges in ebunch.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_node</span></code>(n[,&nbsp;attr_dict])</td>
+<td>Add a single node n and update node attributes.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_nodes_from</span></code>(nodes,&nbsp;**attr)</td>
+<td>Add multiple nodes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.scene.transforms.EnforcedForest.add_path" title="trimesh.scene.transforms.EnforcedForest.add_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_path</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Add a path.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_star</span></code>(nodes,&nbsp;**attr)</td>
+<td>Add a star.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_weighted_edges_from</span></code>(ebunch[,&nbsp;weight])</td>
+<td>Add all the edges in ebunch as weighted edges with specified weights.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">adjacency_iter</span></code>()</td>
+<td>Return an iterator of (node, adjacency dict) tuples for all nodes.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">adjacency_list</span></code>()</td>
+<td>Return an adjacency list representation of the graph.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">adjlist_dict_factory</span></code></td>
+<td>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">builtins.dict</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear</span></code>()</td>
+<td>Remove all nodes and edges from the graph.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code>()</td>
+<td>Return a copy of the graph.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">degree</span></code>([nbunch,&nbsp;weight])</td>
+<td>Return the degree of a node or nodes.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">degree_iter</span></code>([nbunch,&nbsp;weight])</td>
+<td>Return an iterator for (node, degree).</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">edge_attr_dict_factory</span></code></td>
+<td>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">builtins.dict</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">edges</span></code>([nbunch,&nbsp;data,&nbsp;default])</td>
+<td>Return a list of edges.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">edges_iter</span></code>([nbunch,&nbsp;data,&nbsp;default])</td>
+<td>Return an iterator over the edges.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_edge_data</span></code>(u,&nbsp;v[,&nbsp;default])</td>
+<td>Return the attribute dictionary associated with edge (u,v).</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_edge</span></code>(u,&nbsp;v)</td>
+<td>Return True if the edge (u,v) is in the graph.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_node</span></code>(n)</td>
+<td>Return True if the graph contains the node n.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_predecessor</span></code>(u,&nbsp;v)</td>
+<td>Return True if node u has predecessor v.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_successor</span></code>(u,&nbsp;v)</td>
+<td>Return True if node u has successor v.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">in_degree</span></code>([nbunch,&nbsp;weight])</td>
+<td>Return the in-degree of a node or nodes.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">in_degree_iter</span></code>([nbunch,&nbsp;weight])</td>
+<td>Return an iterator for (node, in-degree).</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">in_edges</span></code>([nbunch,&nbsp;data])</td>
+<td>Return a list of the incoming edges.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">in_edges_iter</span></code>([nbunch,&nbsp;data])</td>
+<td>Return an iterator over the incoming edges.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_directed</span></code>()</td>
+<td>Return True if graph is directed, False otherwise.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_multigraph</span></code>()</td>
+<td>Return True if graph is a multigraph, False otherwise.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">nbunch_iter</span></code>([nbunch])</td>
+<td>Return an iterator of nodes contained in nbunch that are also in the graph.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors</span></code>(n)</td>
+<td>Return a list of successor nodes of n.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors_iter</span></code>(n)</td>
+<td>Return an iterator over successor nodes of n.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">node_dict_factory</span></code></td>
+<td>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">builtins.dict</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">nodes</span></code>([data])</td>
+<td>Return a list of the nodes in the graph.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">nodes_iter</span></code>([data])</td>
+<td>Return an iterator over the nodes.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">nodes_with_selfloops</span></code>()</td>
+<td>Return a list of nodes with self loops.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_edges</span></code>([u,&nbsp;v])</td>
+<td>Return the number of edges between two nodes.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_nodes</span></code>()</td>
+<td>Return the number of nodes in the graph.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_selfloops</span></code>()</td>
+<td>Return the number of selfloop edges.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">order</span></code>()</td>
+<td>Return the number of nodes in the graph.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">out_degree</span></code>([nbunch,&nbsp;weight])</td>
+<td>Return the out-degree of a node or nodes.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">out_degree_iter</span></code>([nbunch,&nbsp;weight])</td>
+<td>Return an iterator for (node, out-degree).</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">out_edges</span></code>([nbunch,&nbsp;data,&nbsp;default])</td>
+<td>Return a list of edges.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">out_edges_iter</span></code>([nbunch,&nbsp;data,&nbsp;default])</td>
+<td>Return an iterator over the edges.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">predecessors</span></code>(n)</td>
+<td>Return a list of predecessor nodes of n.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">predecessors_iter</span></code>(n)</td>
+<td>Return an iterator over predecessor nodes of n.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#trimesh.scene.transforms.EnforcedForest.remove_edge" title="trimesh.scene.transforms.EnforcedForest.remove_edge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_edge</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Remove the edge between u and v.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.scene.transforms.EnforcedForest.remove_edges_from" title="trimesh.scene.transforms.EnforcedForest.remove_edges_from"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_edges_from</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Remove all edges specified in ebunch.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_node</span></code>(n)</td>
+<td>Remove node n.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_nodes_from</span></code>(nbunch)</td>
+<td>Remove multiple nodes.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">reverse</span></code>([copy])</td>
+<td>Return the reverse of the graph.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">selfloop_edges</span></code>([data,&nbsp;default])</td>
+<td>Return a list of selfloop edges.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">size</span></code>([weight])</td>
+<td>Return the number of edges.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">subgraph</span></code>(nbunch)</td>
+<td>Return the subgraph induced on nodes in nbunch.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">successors</span></code>(n)</td>
+<td>Return a list of successor nodes of n.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">successors_iter</span></code>(n)</td>
+<td>Return an iterator over successor nodes of n.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_directed</span></code>()</td>
+<td>Return a directed copy of the graph.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_undirected</span></code>([reciprocal])</td>
+<td>Return an undirected representation of the digraph.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="74%" />
+<col width="26%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>disconnect_path</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>get_edge_data_direction</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>shortest_path_undirected</strong></td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trimesh.scene.transforms.EnforcedForest.add_edge">
+<code class="descname">add_edge</code><span class="sig-paren">(</span><em>u</em>, <em>v</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.EnforcedForest.add_edge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an edge between u and v.</p>
+<p>The nodes u and v will be automatically added if they are
+not already in the graph.</p>
+<p>Edge attributes can be specified with keywords or by providing
+a dictionary with key/value pairs.  See examples below.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>u, v</strong> <span class="classifier-delimiter">:</span> <span class="classifier">nodes</span></dt>
+<dd><p class="first last">Nodes can be, for example, strings or numbers.
+Nodes must be hashable (and not None) Python objects.</p>
+</dd>
+<dt><strong>attr_dict</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dictionary, optional (default= no attributes)</span></dt>
+<dd><p class="first last">Dictionary of edge attributes.  Key/value pairs will
+update existing data associated with the edge.</p>
+</dd>
+<dt><strong>attr</strong> <span class="classifier-delimiter">:</span> <span class="classifier">keyword arguments, optional</span></dt>
+<dd><p class="first last">Edge data (or labels or objects) can be assigned using
+keyword arguments.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="last docutils">
+<dt><a class="reference internal" href="#trimesh.scene.transforms.EnforcedForest.add_edges_from" title="trimesh.scene.transforms.EnforcedForest.add_edges_from"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_edges_from</span></code></a></dt>
+<dd>add a collection of edges</dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>Adding an edge that already exists updates the edge data.</p>
+<p>Many NetworkX algorithms designed for weighted graphs use as
+the edge weight a numerical value assigned to a keyword
+which by default is ‘weight’.</p>
+<p class="rubric">Examples</p>
+<p>The following all add the edge e=(1,2) to graph G:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>   <span class="c1"># or DiGraph, MultiGraph, MultiDiGraph, etc</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>           <span class="c1"># explicit two-node form</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="o">*</span><span class="n">e</span><span class="p">)</span>             <span class="c1"># single edge as tuple of two nodes</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">(</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)]</span> <span class="p">)</span> <span class="c1"># add edges from iterable container</span>
+</pre></div>
+</div>
+<p>Associate data to edges using keywords:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">capacity</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mf">342.7</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.transforms.EnforcedForest.add_edges_from">
+<code class="descname">add_edges_from</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.EnforcedForest.add_edges_from" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add all the edges in ebunch.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>ebunch</strong> <span class="classifier-delimiter">:</span> <span class="classifier">container of edges</span></dt>
+<dd><p class="first last">Each edge given in the container will be added to the
+graph. The edges must be given as as 2-tuples (u,v) or
+3-tuples (u,v,d) where d is a dictionary containing edge
+data.</p>
+</dd>
+<dt><strong>attr_dict</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dictionary, optional (default= no attributes)</span></dt>
+<dd><p class="first last">Dictionary of edge attributes.  Key/value pairs will
+update existing data associated with each edge.</p>
+</dd>
+<dt><strong>attr</strong> <span class="classifier-delimiter">:</span> <span class="classifier">keyword arguments, optional</span></dt>
+<dd><p class="first last">Edge data (or labels or objects) can be assigned using
+keyword arguments.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="last docutils">
+<dt><a class="reference internal" href="#trimesh.scene.transforms.EnforcedForest.add_edge" title="trimesh.scene.transforms.EnforcedForest.add_edge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_edge</span></code></a></dt>
+<dd>add a single edge</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_weighted_edges_from</span></code></dt>
+<dd>convenient way to add weighted edges</dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>Adding the same edge twice has no effect but any edge data
+will be updated when each duplicate edge is added.</p>
+<p>Edge attributes specified in edges take precedence
+over attributes specified generally.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>   <span class="c1"># or DiGraph, MultiGraph, MultiDiGraph, etc</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)])</span> <span class="c1"># using a list of edge tuples</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="c1"># Add the path graph 0-1-2-3</span>
+</pre></div>
+</div>
+<p>Associate data to edges</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)],</span> <span class="n">weight</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">)],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;WN2898&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.transforms.EnforcedForest.add_path">
+<code class="descname">add_path</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.EnforcedForest.add_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a path.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>nodes</strong> <span class="classifier-delimiter">:</span> <span class="classifier">iterable container</span></dt>
+<dd><p class="first last">A container of nodes.  A path will be constructed from
+the nodes (in order) and added to the graph.</p>
+</dd>
+<dt><strong>attr</strong> <span class="classifier-delimiter">:</span> <span class="classifier">keyword arguments, optional (default= no attributes)</span></dt>
+<dd><p class="first last">Attributes to add to every edge in path.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_star</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">add_cycle</span></code></p>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">G</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>   <span class="c1"># or DiGraph, MultiGraph, MultiDiGraph, etc</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">G</span><span class="o">.</span><span class="n">add_path</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">G</span><span class="o">.</span><span class="n">add_path</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">],</span><span class="n">weight</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.transforms.EnforcedForest.disconnect_path">
+<code class="descname">disconnect_path</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.EnforcedForest.disconnect_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.transforms.EnforcedForest.get_edge_data_direction">
+<code class="descname">get_edge_data_direction</code><span class="sig-paren">(</span><em>u</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.EnforcedForest.get_edge_data_direction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.transforms.EnforcedForest.remove_edge">
+<code class="descname">remove_edge</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.EnforcedForest.remove_edge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the edge between u and v.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>u, v</strong> <span class="classifier-delimiter">:</span> <span class="classifier">nodes</span></dt>
+<dd><p class="first last">Remove the edge between nodes u and v.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>NetworkXError</strong></dt>
+<dd><p class="first last">If there is not an edge between u and v.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="last docutils">
+<dt><a class="reference internal" href="#trimesh.scene.transforms.EnforcedForest.remove_edges_from" title="trimesh.scene.transforms.EnforcedForest.remove_edges_from"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_edges_from</span></code></a></dt>
+<dd>remove a collection of edges</dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>   <span class="c1"># or DiGraph, etc</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">G</span><span class="o">.</span><span class="n">add_path</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">G</span><span class="o">.</span><span class="n">remove_edge</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">G</span><span class="o">.</span><span class="n">remove_edge</span><span class="p">(</span><span class="o">*</span><span class="n">e</span><span class="p">)</span> <span class="c1"># unpacks e from an edge tuple</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,{</span><span class="s1">&#39;weight&#39;</span><span class="p">:</span><span class="mi">7</span><span class="p">})</span> <span class="c1"># an edge with attribute data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">G</span><span class="o">.</span><span class="n">remove_edge</span><span class="p">(</span><span class="o">*</span><span class="n">e</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># select first part of edge tuple</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.transforms.EnforcedForest.remove_edges_from">
+<code class="descname">remove_edges_from</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.EnforcedForest.remove_edges_from" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all edges specified in ebunch.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>ebunch: list or container of edge tuples</strong></dt>
+<dd><p class="first">Each edge given in the list or container will be removed
+from the graph. The edges can be:</p>
+<blockquote class="last">
+<div><ul class="simple">
+<li>2-tuples (u,v) edge between u and v.</li>
+<li>3-tuples (u,v,k) where k is ignored.</li>
+</ul>
+</div></blockquote>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="last docutils">
+<dt><a class="reference internal" href="#trimesh.scene.transforms.EnforcedForest.remove_edge" title="trimesh.scene.transforms.EnforcedForest.remove_edge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_edge</span></code></a></dt>
+<dd>remove a single edge</dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>Will fail silently if an edge in ebunch is not in the graph.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>   <span class="c1"># or DiGraph, MultiGraph, MultiDiGraph, etc</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">G</span><span class="o">.</span><span class="n">add_path</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ebunch</span><span class="o">=</span><span class="p">[(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">G</span><span class="o">.</span><span class="n">remove_edges_from</span><span class="p">(</span><span class="n">ebunch</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.transforms.EnforcedForest.shortest_path_undirected">
+<code class="descname">shortest_path_undirected</code><span class="sig-paren">(</span><em>u</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.EnforcedForest.shortest_path_undirected" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="trimesh.scene.transforms.TransformForest">
+<em class="property">class </em><code class="descclassname">trimesh.scene.transforms.</code><code class="descname">TransformForest</code><span class="sig-paren">(</span><em>base_frame='world'</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.TransformForest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><a class="reference internal" href="#trimesh.scene.transforms.TransformForest.nodes" title="trimesh.scene.transforms.TransformForest.nodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nodes</span></code></a></dt>
+<dd><p class="first last">A list of every node in the graph.</p>
+</dd>
+<dt><a class="reference internal" href="#trimesh.scene.transforms.TransformForest.nodes_geometry" title="trimesh.scene.transforms.TransformForest.nodes_geometry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nodes_geometry</span></code></a></dt>
+<dd><p class="first last">The nodes in the scene graph with geometry attached.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#trimesh.scene.transforms.TransformForest.copy" title="trimesh.scene.transforms.TransformForest.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</td>
+<td>Return a copy of the current TransformForest</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.scene.transforms.TransformForest.from_edgelist" title="trimesh.scene.transforms.TransformForest.from_edgelist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_edgelist</span></code></a>(edges[,&nbsp;strict])</td>
+<td>Load transform data from an edge list into the current scene graph.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#trimesh.scene.transforms.TransformForest.get" title="trimesh.scene.transforms.TransformForest.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a>(frame_to[,&nbsp;frame_from])</td>
+<td>Get the transform from one frame to another, assuming they are connected in the transform tree.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.scene.transforms.TransformForest.load" title="trimesh.scene.transforms.TransformForest.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>(edgelist)</td>
+<td>Load transform data from an edge list into the current scene graph.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#trimesh.scene.transforms.TransformForest.md5" title="trimesh.scene.transforms.TransformForest.md5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">md5</span></code></a>()</td>
+<td>MD5 of transforms.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.scene.transforms.TransformForest.show" title="trimesh.scene.transforms.TransformForest.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>()</td>
+<td>Plot the graph layout of the scene.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#trimesh.scene.transforms.TransformForest.to_edgelist" title="trimesh.scene.transforms.TransformForest.to_edgelist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_edgelist</span></code></a>()</td>
+<td>Export the current transforms as a list of edge tuples, with each tuple having the format: (node_a, node_b, {metadata})</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.scene.transforms.TransformForest.to_flattened" title="trimesh.scene.transforms.TransformForest.to_flattened"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_flattened</span></code></a>([base_frame])</td>
+<td>Export the current transform graph as a flattened</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#trimesh.scene.transforms.TransformForest.to_gltf" title="trimesh.scene.transforms.TransformForest.to_gltf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_gltf</span></code></a>(mesh_index)</td>
+<td>Export a transforms as the ‘nodes’ section of a GLTF dict.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.scene.transforms.TransformForest.update" title="trimesh.scene.transforms.TransformForest.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a>(frame_to[,&nbsp;frame_from])</td>
+<td>Update a transform in the tree.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>clear</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>to_svg</strong></td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trimesh.scene.transforms.TransformForest.clear">
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.TransformForest.clear" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.transforms.TransformForest.copy">
+<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.TransformForest.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a copy of the current TransformForest</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>copied: TransformForest</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.transforms.TransformForest.from_edgelist">
+<code class="descname">from_edgelist</code><span class="sig-paren">(</span><em>edges</em>, <em>strict=True</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.TransformForest.from_edgelist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load transform data from an edge list into the current
+scene graph.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>edgelist</strong> <span class="classifier-delimiter">:</span> <span class="classifier">(n,) tuples</span></dt>
+<dd><p class="first last">(node_a, node_b, {key: value})</p>
+</dd>
+<dt><strong>strict</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If true, raise a ValueError when a
+malformed edge is passed in a tuple.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.transforms.TransformForest.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>frame_to</em>, <em>frame_from=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.TransformForest.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the transform from one frame to another, assuming they are connected
+in the transform tree.</p>
+<p>If the frames are not connected a NetworkXNoPath error will be raised.</p>
+<dl class="docutils">
+<dt>frame_from: hashable object, usually a string (eg ‘world’).</dt>
+<dd>If left as None it will be set to self.base_frame</dd>
+</dl>
+<p>frame_to:   hashable object, usually a string (eg ‘mesh_0’)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>transform:  (4,4) homogenous transformation matrix</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.transforms.TransformForest.load">
+<code class="descname">load</code><span class="sig-paren">(</span><em>edgelist</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.TransformForest.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load transform data from an edge list into the current
+scene graph.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>edgelist</strong> <span class="classifier-delimiter">:</span> <span class="classifier">(n,) tuples</span></dt>
+<dd><p class="first last">(node_a, node_b, {key: value})</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.transforms.TransformForest.md5">
+<code class="descname">md5</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.TransformForest.md5" title="Permalink to this definition">¶</a></dt>
+<dd><p>MD5 of transforms.</p>
+<p>Currently only hashing update time.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trimesh.scene.transforms.TransformForest.nodes">
+<code class="descname">nodes</code><a class="headerlink" href="#trimesh.scene.transforms.TransformForest.nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of every node in the graph.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>nodes: (n,) array, of node names</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="trimesh.scene.transforms.TransformForest.nodes_geometry">
+<code class="descname">nodes_geometry</code><a class="headerlink" href="#trimesh.scene.transforms.TransformForest.nodes_geometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>The nodes in the scene graph with geometry attached.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>nodes_geometry: (m,) array, of node names</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.transforms.TransformForest.show">
+<code class="descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.TransformForest.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the graph layout of the scene.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.transforms.TransformForest.to_edgelist">
+<code class="descname">to_edgelist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.TransformForest.to_edgelist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export the current transforms as a list of edge tuples, with
+each tuple having the format:
+(node_a, node_b, {metadata})</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>edgelist: (n,) list of tuples</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.transforms.TransformForest.to_flattened">
+<code class="descname">to_flattened</code><span class="sig-paren">(</span><em>base_frame=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.TransformForest.to_flattened" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export the current transform graph as a flattened</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.transforms.TransformForest.to_gltf">
+<code class="descname">to_gltf</code><span class="sig-paren">(</span><em>mesh_index</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.TransformForest.to_gltf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export a transforms as the ‘nodes’ section of a GLTF dict.
+Flattens tree.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>gltf: dict, with keys:</strong></dt>
+<dd><p class="first last">‘nodes’: list of dicts</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.transforms.TransformForest.to_svg">
+<code class="descname">to_svg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.TransformForest.to_svg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.transforms.TransformForest.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>frame_to</em>, <em>frame_from=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.TransformForest.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update a transform in the tree.</p>
+<dl class="docutils">
+<dt>frame_from: hashable object, usually a string (eg ‘world’).</dt>
+<dd>If left as None it will be set to self.base_frame</dd>
+</dl>
+<p>frame_to:   hashable object, usually a string (eg ‘mesh_0’)</p>
+<p>matrix:      (4,4) array
+quaternion:  (4) quaternion
+axis:        (3) array
+angle:       float, radians
+translation: (3) array
+geometry : Geometry object name</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.scene.transforms.kwargs_to_matrix">
+<code class="descclassname">trimesh.scene.transforms.</code><code class="descname">kwargs_to_matrix</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.kwargs_to_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn a set of keyword arguments into a transformation matrix.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.scene.transforms.path_to_edges">
+<code class="descclassname">trimesh.scene.transforms.</code><code class="descname">path_to_edges</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.transforms.path_to_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn an (n) path into a (2(n-1)) set of edges</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-trimesh.scene.viewer">
+<span id="trimesh-scene-viewer-module"></span><h2>trimesh.scene.viewer module<a class="headerlink" href="#module-trimesh.scene.viewer" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="trimesh.scene.viewer.SceneViewer">
+<em class="property">class </em><code class="descclassname">trimesh.scene.viewer.</code><code class="descname">SceneViewer</code><span class="sig-paren">(</span><em>scene</em>, <em>smooth=True</em>, <em>flags=None</em>, <em>visible=True</em>, <em>resolution=(640</em>, <em>480)</em>, <em>start_loop=True</em>, <em>callback=None</em>, <em>callback_period=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.viewer.SceneViewer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pyglet.window.Window</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>CURSOR_DEFAULT</strong></dt>
+<dd></dd>
+<dt><strong>WINDOW_STYLE_DEFAULT</strong></dt>
+<dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">caption</span></code></dt>
+<dd><p class="first last">The window caption (title).</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">config</span></code></dt>
+<dd><p class="first last">A GL config describing the context of this window.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">context</span></code></dt>
+<dd><p class="first last">The OpenGL context attached to this window.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">display</span></code></dt>
+<dd><p class="first last">The display this window belongs to.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">fullscreen</span></code></dt>
+<dd><p class="first last">True if the window is currently fullscreen.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">height</span></code></dt>
+<dd><p class="first last">The height of the window, in pixels.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">resizeable</span></code></dt>
+<dd><p class="first last">True if the window is resizable.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">screen</span></code></dt>
+<dd><p class="first last">The screen this window is fullscreen in.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">style</span></code></dt>
+<dd><p class="first last">The window style; one of the <code class="docutils literal notranslate"><span class="pre">WINDOW_STYLE_*</span></code> constants.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">visible</span></code></dt>
+<dd><p class="first last">True if the window is currently visible.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">vsync</span></code></dt>
+<dd><p class="first last">True if buffer flips are synchronised to the screen’s vertical retrace.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">width</span></code></dt>
+<dd><p class="first last">The width of the window, in pixels.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">activate</span></code>()</td>
+<td>Attempt to restore keyboard focus to the window.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear</span></code>()</td>
+<td>Clear the window.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code>()</td>
+<td>Close the window.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">dispatch_events</span></code>()</td>
+<td>Poll the operating system event queue for new events and call attached event handlers.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">draw_mouse_cursor</span></code>()</td>
+<td>Draw the custom mouse cursor.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">event</span></code>(*args)</td>
+<td>Function decorator for an event handler.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">flip</span></code>()</td>
+<td>Swap the OpenGL front and back buffers.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_location</span></code>()</td>
+<td>Return the current position of the window.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_size</span></code>()</td>
+<td>Return the current size of the window.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_system_mouse_cursor</span></code>(name)</td>
+<td>Obtain a system mouse cursor.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_viewport_size</span></code>()</td>
+<td>Return the size in actual pixels of the viewport.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">maximize</span></code>()</td>
+<td>Maximize the window.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">minimize</span></code>()</td>
+<td>Minimize the window.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_activate</span></code>()</td>
+<td>The window was activated.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_close</span></code>()</td>
+<td>The user attempted to close the window.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_context_lost</span></code>()</td>
+<td>The window’s GL context was lost.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_context_state_lost</span></code>()</td>
+<td>The state of the window’s GL context was lost.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_deactivate</span></code>()</td>
+<td>The window was deactivated.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#trimesh.scene.viewer.SceneViewer.on_draw" title="trimesh.scene.viewer.SceneViewer.on_draw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_draw</span></code></a>()</td>
+<td>The window contents must be redrawn.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_expose</span></code>()</td>
+<td>A portion of the window needs to be redrawn.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_hide</span></code>()</td>
+<td>The window was hidden.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.scene.viewer.SceneViewer.on_key_press" title="trimesh.scene.viewer.SceneViewer.on_key_press"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_key_press</span></code></a>(symbol,&nbsp;modifiers)</td>
+<td>A key on the keyboard was pressed (and held down).</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_key_release</span></code>(modifiers)</td>
+<td>A key on the keyboard was released.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.scene.viewer.SceneViewer.on_mouse_drag" title="trimesh.scene.viewer.SceneViewer.on_mouse_drag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_mouse_drag</span></code></a>(x,&nbsp;y,&nbsp;dx,&nbsp;dy,&nbsp;buttons,&nbsp;modifiers)</td>
+<td>The mouse was moved with one or more mouse buttons pressed.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_mouse_enter</span></code>(y)</td>
+<td>The mouse was moved into the window.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_mouse_leave</span></code>(y)</td>
+<td>The mouse was moved outside of the window.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_mouse_motion</span></code>(y,&nbsp;dx,&nbsp;dy)</td>
+<td>The mouse was moved with no buttons held down.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.scene.viewer.SceneViewer.on_mouse_press" title="trimesh.scene.viewer.SceneViewer.on_mouse_press"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_mouse_press</span></code></a>(x,&nbsp;y,&nbsp;buttons,&nbsp;modifiers)</td>
+<td>A mouse button was pressed (and held down).</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_mouse_release</span></code>(y,&nbsp;button,&nbsp;modifiers)</td>
+<td>A mouse button was released.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.scene.viewer.SceneViewer.on_mouse_scroll" title="trimesh.scene.viewer.SceneViewer.on_mouse_scroll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_mouse_scroll</span></code></a>(x,&nbsp;y,&nbsp;dx,&nbsp;dy)</td>
+<td>The mouse wheel was scrolled.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_move</span></code>(y)</td>
+<td>The window was moved.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.scene.viewer.SceneViewer.on_resize" title="trimesh.scene.viewer.SceneViewer.on_resize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_resize</span></code></a>(width,&nbsp;height)</td>
+<td>The window was resized.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_show</span></code>()</td>
+<td>The window was shown.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_text</span></code>()</td>
+<td>The user input some text.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_text_motion</span></code>()</td>
+<td>The user moved the text input cursor.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_text_motion_select</span></code>()</td>
+<td>The user moved the text input cursor while extending the selection.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">pop_handlers</span></code>()</td>
+<td>Pop the top level of event handlers off the stack.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">push_handlers</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Push a level onto the top of the handler stack, then attach zero or more event handlers.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">register_event_type</span></code>(name)</td>
+<td>Register an event type with the dispatcher.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_handler</span></code>(name,&nbsp;handler)</td>
+<td>Remove a single event handler.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_handlers</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Remove event handlers from the event stack.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#trimesh.scene.viewer.SceneViewer.reset_view" title="trimesh.scene.viewer.SceneViewer.reset_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset_view</span></code></a>([flags])</td>
+<td>Set view to base view.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#trimesh.scene.viewer.SceneViewer.save_image" title="trimesh.scene.viewer.SceneViewer.save_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_image</span></code></a>(file_obj)</td>
+<td>Save the current color buffer to a file object, in PNG format.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_caption</span></code>(caption)</td>
+<td>Set the window’s caption.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_exclusive_keyboard</span></code>([exclusive])</td>
+<td>Prevent the user from switching away from this window using keyboard accelerators.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_exclusive_mouse</span></code>([exclusive])</td>
+<td>Hide the mouse cursor and direct all mouse events to this window.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_fullscreen</span></code>([fullscreen,&nbsp;screen,&nbsp;mode,&nbsp;…])</td>
+<td>Toggle to or from fullscreen.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_handler</span></code>(name,&nbsp;handler)</td>
+<td>Attach a single event handler.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_handlers</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Attach one or more event handlers to the top level of the handler stack.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_icon</span></code>(*images)</td>
+<td>Set the window icon.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_location</span></code>(x,&nbsp;y)</td>
+<td>Set the position of the window.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_maximum_size</span></code>(width,&nbsp;height)</td>
+<td>Set the maximum size of the window.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_minimum_size</span></code>(width,&nbsp;height)</td>
+<td>Set the minimum size of the window.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_mouse_cursor</span></code>([cursor])</td>
+<td>Change the appearance of the mouse cursor.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_mouse_platform_visible</span></code>([platform_visible])</td>
+<td>Set the platform-drawn mouse cursor visibility.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_mouse_visible</span></code>([visible])</td>
+<td>Show or hide the mouse cursor.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_size</span></code>(width,&nbsp;height)</td>
+<td>Resize the window.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_visible</span></code>([visible])</td>
+<td>Show or hide the window.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_vsync</span></code>(vsync)</td>
+<td>Enable or disable vertical sync control.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">switch_to</span></code>()</td>
+<td>Make this window the current OpenGL rendering context.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="67%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>add_geometry</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>dispatch_event</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>init_gl</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>toggle_culling</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>toggle_wireframe</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>update_flags</strong></td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="trimesh.scene.viewer.SceneViewer.add_geometry">
+<code class="descname">add_geometry</code><span class="sig-paren">(</span><em>name</em>, <em>geometry</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.viewer.SceneViewer.add_geometry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.viewer.SceneViewer.init_gl">
+<code class="descname">init_gl</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.viewer.SceneViewer.init_gl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.viewer.SceneViewer.on_draw">
+<code class="descname">on_draw</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.viewer.SceneViewer.on_draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>The window contents must be redrawn.</p>
+<p>The <cite>EventLoop</cite> will dispatch this event when the window
+should be redrawn.  This will happen during idle time after
+any window events and after any scheduled functions were called.</p>
+<p>The window will already have the GL context, so there is no
+need to call <cite>switch_to</cite>.  The window’s <cite>flip</cite> method will
+be called after this event, so your event handler should not.</p>
+<p>You should make no assumptions about the window contents when
+this event is triggered; a resize or expose event may have
+invalidated the framebuffer since the last time it was drawn.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.1.</span></p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Event:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.viewer.SceneViewer.on_key_press">
+<code class="descname">on_key_press</code><span class="sig-paren">(</span><em>symbol</em>, <em>modifiers</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.viewer.SceneViewer.on_key_press" title="Permalink to this definition">¶</a></dt>
+<dd><p>A key on the keyboard was pressed (and held down).</p>
+<p>In pyglet 1.0 the default handler sets <cite>has_exit</cite> to <code class="docutils literal notranslate"><span class="pre">True</span></code> if
+the <code class="docutils literal notranslate"><span class="pre">ESC</span></code> key is pressed.</p>
+<p>In pyglet 1.1 the default handler dispatches the <code class="xref py py-meth docutils literal notranslate"><span class="pre">on_close()</span></code>
+event if the <code class="docutils literal notranslate"><span class="pre">ESC</span></code> key is pressed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><cite>symbol</cite> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">The key symbol pressed.</p>
+</dd>
+<dt><cite>modifiers</cite> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Bitwise combination of the key modifiers active.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Event:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.viewer.SceneViewer.on_mouse_drag">
+<code class="descname">on_mouse_drag</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>dx</em>, <em>dy</em>, <em>buttons</em>, <em>modifiers</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.viewer.SceneViewer.on_mouse_drag" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mouse was moved with one or more mouse buttons pressed.</p>
+<p>This event will continue to be fired even if the mouse leaves
+the window, so long as the drag buttons are continuously held down.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><cite>x</cite> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Distance in pixels from the left edge of the window.</p>
+</dd>
+<dt><cite>y</cite> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Distance in pixels from the bottom edge of the window.</p>
+</dd>
+<dt><cite>dx</cite> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Relative X position from the previous mouse position.</p>
+</dd>
+<dt><cite>dy</cite> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Relative Y position from the previous mouse position.</p>
+</dd>
+<dt><cite>buttons</cite> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Bitwise combination of the mouse buttons currently pressed.</p>
+</dd>
+<dt><cite>modifiers</cite> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Bitwise combination of any keyboard modifiers currently
+active.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Event:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.viewer.SceneViewer.on_mouse_press">
+<code class="descname">on_mouse_press</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>buttons</em>, <em>modifiers</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.viewer.SceneViewer.on_mouse_press" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mouse button was pressed (and held down).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><cite>x</cite> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Distance in pixels from the left edge of the window.</p>
+</dd>
+<dt><cite>y</cite> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Distance in pixels from the bottom edge of the window.</p>
+</dd>
+<dt><cite>button</cite> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">The mouse button that was pressed.</p>
+</dd>
+<dt><cite>modifiers</cite> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Bitwise combination of any keyboard modifiers currently
+active.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Event:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.viewer.SceneViewer.on_mouse_scroll">
+<code class="descname">on_mouse_scroll</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>dx</em>, <em>dy</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.viewer.SceneViewer.on_mouse_scroll" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mouse wheel was scrolled.</p>
+<p>Note that most mice have only a vertical scroll wheel, so
+<cite>scroll_x</cite> is usually 0.  An exception to this is the Apple Mighty
+Mouse, which has a mouse ball in place of the wheel which allows
+both <cite>scroll_x</cite> and <cite>scroll_y</cite> movement.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><cite>x</cite> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Distance in pixels from the left edge of the window.</p>
+</dd>
+<dt><cite>y</cite> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Distance in pixels from the bottom edge of the window.</p>
+</dd>
+<dt><cite>scroll_x</cite> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of “clicks” towards the right (left if negative).</p>
+</dd>
+<dt><cite>scroll_y</cite> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of “clicks” upwards (downwards if negative).</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Event:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.viewer.SceneViewer.on_resize">
+<code class="descname">on_resize</code><span class="sig-paren">(</span><em>width</em>, <em>height</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.viewer.SceneViewer.on_resize" title="Permalink to this definition">¶</a></dt>
+<dd><p>The window was resized.</p>
+<p>The window will have the GL context when this event is dispatched;
+there is no need to call <cite>switch_to</cite> in this handler.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><cite>width</cite> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">The new width of the window, in pixels.</p>
+</dd>
+<dt><cite>height</cite> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">The new height of the window, in pixels.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Event:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.viewer.SceneViewer.reset_view">
+<code class="descname">reset_view</code><span class="sig-paren">(</span><em>flags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.viewer.SceneViewer.reset_view" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set view to base view.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.viewer.SceneViewer.save_image">
+<code class="descname">save_image</code><span class="sig-paren">(</span><em>file_obj</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.viewer.SceneViewer.save_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the current color buffer to a file object, in PNG format.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>file_obj: file name, or file- like object</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.viewer.SceneViewer.toggle_culling">
+<code class="descname">toggle_culling</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.viewer.SceneViewer.toggle_culling" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.viewer.SceneViewer.toggle_wireframe">
+<code class="descname">toggle_wireframe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.viewer.SceneViewer.toggle_wireframe" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="trimesh.scene.viewer.SceneViewer.update_flags">
+<code class="descname">update_flags</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.viewer.SceneViewer.update_flags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.scene.viewer.geometry_hash">
+<code class="descclassname">trimesh.scene.viewer.</code><code class="descname">geometry_hash</code><span class="sig-paren">(</span><em>geometry</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.viewer.geometry_hash" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an MD5 for a geometry object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>geometry</strong> <span class="classifier-delimiter">:</span> <span class="classifier">object</span></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>MD5</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.scene.viewer.render_scene">
+<code class="descclassname">trimesh.scene.viewer.</code><code class="descname">render_scene</code><span class="sig-paren">(</span><em>scene</em>, <em>resolution=(1080</em>, <em>1080)</em>, <em>visible=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.viewer.render_scene" title="Permalink to this definition">¶</a></dt>
+<dd><p>Render a preview of a scene to a PNG.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>scene:      trimesh.Scene object</strong></dt>
+<dd></dd>
+<dt><strong>resolution: (2,) int, resolution in pixels</strong></dt>
+<dd></dd>
+<dt><strong>kwargs:     passed to SceneViewer</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>render: bytes, image in PNG format</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.scene.viewer.view_to_transform">
+<code class="descclassname">trimesh.scene.viewer.</code><code class="descname">view_to_transform</code><span class="sig-paren">(</span><em>view</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.viewer.view_to_transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a dictionary containing view parameters,
+calculate a transformation matrix.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-trimesh.scene.viewerJS">
+<span id="trimesh-scene-viewerjs-module"></span><h2>trimesh.scene.viewerJS module<a class="headerlink" href="#module-trimesh.scene.viewerJS" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="viewerjs-py">
+<h3>viewerJS.py<a class="headerlink" href="#viewerjs-py" title="Permalink to this headline">¶</a></h3>
+<p>Render trimesh.Scene objects using three.js</p>
+<dl class="function">
+<dt id="trimesh.scene.viewerJS.in_notebook">
+<code class="descclassname">trimesh.scene.viewerJS.</code><code class="descname">in_notebook</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.viewerJS.in_notebook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check to see if we are in an IPython or Jypyter notebook.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>in_notebook</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Returns True if we are in a notebook</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.scene.viewerJS.scene_to_html">
+<code class="descclassname">trimesh.scene.viewerJS.</code><code class="descname">scene_to_html</code><span class="sig-paren">(</span><em>scene</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.viewerJS.scene_to_html" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return HTML that will render the scene using
+GLTF/GLB encoded to base64 loaded by three.js</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>scene</strong> <span class="classifier-delimiter">:</span> <span class="classifier">trimesh.Scene</span></dt>
+<dd><p class="first last">Source geometry</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>html</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">HTML containing embedded geometry</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.scene.viewerJS.scene_to_notebook">
+<code class="descclassname">trimesh.scene.viewerJS.</code><code class="descname">scene_to_notebook</code><span class="sig-paren">(</span><em>scene</em>, <em>height=500</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.scene.viewerJS.scene_to_notebook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a scene to HTML containing embedded geometry
+and a three.js viewer that will display nicely in
+an IPython/Jupyter notebook.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>scene</strong> <span class="classifier-delimiter">:</span> <span class="classifier">trimesh.Scene</span></dt>
+<dd><p class="first last">Source geometry</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>html</strong> <span class="classifier-delimiter">:</span> <span class="classifier">IPython.display.HTML</span></dt>
+<dd><p class="first last">Object containing rendered scene</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-trimesh.scene">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-trimesh.scene" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="trimesh.resources.html" class="btn btn-neutral" title="trimesh.resources package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Michael Dawson-Haggerty.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.33.43',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

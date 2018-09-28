@@ -1,0 +1,1385 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>trimesh.io package &mdash; trimesh 2.33.43 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="trimesh.path package" href="trimesh.path.html" />
+    <link rel="prev" title="trimesh.interfaces package" href="trimesh.interfaces.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> trimesh
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.33.43
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Advanced Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Module Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="trimesh.html">trimesh package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="trimesh.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="trimesh.interfaces.html">trimesh.interfaces package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">trimesh.io package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.path.html">trimesh.path package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.ray.html">trimesh.ray package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.resources.html">trimesh.resources package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="trimesh.scene.html">trimesh.scene package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.base">trimesh.base module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.boolean">trimesh.boolean module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.bounds">trimesh.bounds module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.caching">trimesh.caching module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.collision">trimesh.collision module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.comparison">trimesh.comparison module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.constants">trimesh.constants module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.convex">trimesh.convex module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.creation">trimesh.creation module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.curvature">trimesh.curvature module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.decomposition">trimesh.decomposition module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.geometry">trimesh.geometry module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.graph">trimesh.graph module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.grouping">trimesh.grouping module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.inertia">trimesh.inertia module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.integrate">trimesh.integrate module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.intersections">trimesh.intersections module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.nsphere">trimesh.nsphere module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.permutate">trimesh.permutate module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.points">trimesh.points module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.poses">trimesh.poses module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.primitives">trimesh.primitives module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.proximity">trimesh.proximity module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.registration">trimesh.registration module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.remesh">trimesh.remesh module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.rendering">trimesh.rendering module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.repair">trimesh.repair module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.sample">trimesh.sample module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.transformations">trimesh.transformations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.triangles">trimesh.triangles module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.units">trimesh.units module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.util">trimesh.util module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.version">trimesh.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.visual">trimesh.visual module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh.voxel">trimesh.voxel module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trimesh.html#module-trimesh">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">trimesh</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Module Reference</a> &raquo;</li>
+        
+          <li><a href="trimesh.html">trimesh package</a> &raquo;</li>
+        
+      <li>trimesh.io package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/trimesh.io.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="trimesh-io-package">
+<h1>trimesh.io package<a class="headerlink" href="#trimesh-io-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-trimesh.io.assimp">
+<span id="trimesh-io-assimp-module"></span><h2>trimesh.io.assimp module<a class="headerlink" href="#module-trimesh.io.assimp" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="trimesh.io.assimp.load_cyassimp">
+<code class="descclassname">trimesh.io.assimp.</code><code class="descname">load_cyassimp</code><span class="sig-paren">(</span><em>file_obj</em>, <em>file_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.assimp.load_cyassimp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a file using the cyassimp bindings.</p>
+<p>The easiest way to install these is with conda:
+conda install -c menpo/label/master cyassimp</p>
+<p>file_obj: file object, or str
+file_type: str, file extension (aka ‘stl’)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>meshes: (n,) list of dicts, which contain kwargs for Trimesh constructor</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.assimp.load_pyassimp">
+<code class="descclassname">trimesh.io.assimp.</code><code class="descname">load_pyassimp</code><span class="sig-paren">(</span><em>file_obj</em>, <em>file_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.assimp.load_pyassimp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the pyassimp library to load a mesh, from a file object and type,
+or filename (if file_obj is a string)</p>
+<p>file_obj: file object, or str of file path
+file_type: str, file extension (aka ‘stl’)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>meshes: (n,) list of dicts, which contain kwargs for Trimesh constructor</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-trimesh.io.export">
+<span id="trimesh-io-export-module"></span><h2>trimesh.io.export module<a class="headerlink" href="#module-trimesh.io.export" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="trimesh.io.export.export_collada">
+<code class="descclassname">trimesh.io.export.</code><code class="descname">export_collada</code><span class="sig-paren">(</span><em>mesh</em>, <em>digits=8</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.export.export_collada" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export a mesh as a COLLADA file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>mesh</strong> <span class="classifier-delimiter">:</span> <span class="classifier">Trimesh object</span></dt>
+<dd><p class="first last">Mesh to be exported</p>
+</dd>
+<dt><strong>digits</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of ASCII digits to include for
+floating point variables</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>dae</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Mesh as a COLLADA file</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.export.export_dict">
+<code class="descclassname">trimesh.io.export.</code><code class="descname">export_dict</code><span class="sig-paren">(</span><em>mesh</em>, <em>encoding=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.export.export_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export a mesh to a dict</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>mesh</strong> <span class="classifier-delimiter">:</span> <span class="classifier">Trimesh object</span></dt>
+<dd><p class="first last">Mesh to be exported</p>
+</dd>
+<dt><strong>encoding</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str, or None</span></dt>
+<dd><p class="first last">‘base64’</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.export.export_dict64">
+<code class="descclassname">trimesh.io.export.</code><code class="descname">export_dict64</code><span class="sig-paren">(</span><em>mesh</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.export.export_dict64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export a mesh as a dictionary, with data encoded
+to base64.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.export.export_json">
+<code class="descclassname">trimesh.io.export.</code><code class="descname">export_json</code><span class="sig-paren">(</span><em>mesh</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.export.export_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.export.export_mesh">
+<code class="descclassname">trimesh.io.export.</code><code class="descname">export_mesh</code><span class="sig-paren">(</span><em>mesh</em>, <em>file_obj</em>, <em>file_type=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.export.export_mesh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export a Trimesh object to a file- like object, or to a filename</p>
+<p>file_obj: a filename string or a file-like object
+file_type: str representing file type (eg: ‘stl’)
+process:   boolean flag, whether to process the mesh on load</p>
+<p>Returns:
+mesh: a single Trimesh object, or a list of Trimesh objects,</p>
+<blockquote>
+<div>depending on the file format.</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.export.export_msgpack">
+<code class="descclassname">trimesh.io.export.</code><code class="descname">export_msgpack</code><span class="sig-paren">(</span><em>mesh</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.export.export_msgpack" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.export.export_off">
+<code class="descclassname">trimesh.io.export.</code><code class="descname">export_off</code><span class="sig-paren">(</span><em>mesh</em>, <em>digits=10</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.export.export_off" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export a mesh as an OFF file, a simple text format</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>mesh</strong> <span class="classifier-delimiter">:</span> <span class="classifier">Trimesh object</span></dt>
+<dd></dd>
+<dt><strong>digits</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">number of digits to include on floats</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>export</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">OFF format output</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-trimesh.io.gltf">
+<span id="trimesh-io-gltf-module"></span><h2>trimesh.io.gltf module<a class="headerlink" href="#module-trimesh.io.gltf" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="gltf-py">
+<h3>gltf.py<a class="headerlink" href="#gltf-py" title="Permalink to this headline">¶</a></h3>
+<p>Provides GLTF 2.0 exports of trimesh.Trimesh objects
+as GL_TRIANGLES, and trimesh.Path2D/Path3D as GL_LINES</p>
+<dl class="function">
+<dt id="trimesh.io.gltf.export_glb">
+<code class="descclassname">trimesh.io.gltf.</code><code class="descname">export_glb</code><span class="sig-paren">(</span><em>scene</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.gltf.export_glb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export a scene as a binary GLTF (GLB) file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>scene: trimesh.Scene object</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>exported: bytes, exported result</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.gltf.export_gltf">
+<code class="descclassname">trimesh.io.gltf.</code><code class="descname">export_gltf</code><span class="sig-paren">(</span><em>scene</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.gltf.export_gltf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export a scene object as a GLTF directory.</p>
+<p>This has the advantage of putting each mesh into a separate
+file (buffer) as opposed to one large file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>scene: trimesh.Scene object</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>export: dict, {file name</strong> <span class="classifier-delimiter">:</span> <span class="classifier">file data}</span></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.gltf.load_glb">
+<code class="descclassname">trimesh.io.gltf.</code><code class="descname">load_glb</code><span class="sig-paren">(</span><em>file_obj</em>, <em>**passed</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.gltf.load_glb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a GLTF file in the binary GLB format into a trimesh.Scene.</p>
+<p>Implemented from specification:
+<a class="reference external" href="https://github.com/KhronosGroup/glTF/tree/master/specification/2.0">https://github.com/KhronosGroup/glTF/tree/master/specification/2.0</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>file_obj</strong> <span class="classifier-delimiter">:</span> <span class="classifier">file- like object</span></dt>
+<dd><p class="first last">Containing GLB data</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>kwargs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">Kwargs to instantiate a trimesh.Scene</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-trimesh.io.load">
+<span id="trimesh-io-load-module"></span><h2>trimesh.io.load module<a class="headerlink" href="#module-trimesh.io.load" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="trimesh.io.load.available_formats">
+<code class="descclassname">trimesh.io.load.</code><code class="descname">available_formats</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.load.available_formats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of all available loaders</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>loaders</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd><p class="first last">Extensions of available loaders
+i.e. ‘stl’, ‘ply’, ‘dxf’, etc.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.load.load">
+<code class="descclassname">trimesh.io.load.</code><code class="descname">load</code><span class="sig-paren">(</span><em>file_obj</em>, <em>file_type=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.load.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a mesh or vectorized path into objects:
+Trimesh, Path2D, Path3D, Scene</p>
+<dl class="docutils">
+<dt>file_obj <span class="classifier-delimiter">:</span> <span class="classifier">str, or file- like object</span></dt>
+<dd>The source of the data to be loadeded</dd>
+<dt>file_type: str</dt>
+<dd>What kind of file type do we have (eg: ‘stl’)</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>geometry</strong> <span class="classifier-delimiter">:</span> <span class="classifier">Trimesh, Path2D, Path3D, Scene</span></dt>
+<dd><p class="first last">Loaded geometry as trimesh classes</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.load.load_compressed">
+<code class="descclassname">trimesh.io.load.</code><code class="descname">load_compressed</code><span class="sig-paren">(</span><em>file_obj</em>, <em>file_type=None</em>, <em>mixed=False</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.load.load_compressed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a compressed archive load all the geometry that
+we can from it.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>file_obj</strong> <span class="classifier-delimiter">:</span> <span class="classifier">open file-like object</span></dt>
+<dd><p class="first last">Containing compressed data</p>
+</dd>
+<dt><strong>file_type</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Type of the archive file</p>
+</dd>
+<dt><strong>mixed</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If False, for archives containing both 2D and 3D
+data will only load the 3D data into the Scene.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>scene</strong> <span class="classifier-delimiter">:</span> <span class="classifier">trimesh.Scene</span></dt>
+<dd><p class="first last">Geometry loaded in to a Scene object</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.load.load_kwargs">
+<code class="descclassname">trimesh.io.load.</code><code class="descname">load_kwargs</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.load.load_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load geometry from a properly formatted dict or kwargs</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.load.load_remote">
+<code class="descclassname">trimesh.io.load.</code><code class="descname">load_remote</code><span class="sig-paren">(</span><em>url</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.load.load_remote" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a mesh at a remote URL into a local trimesh object.</p>
+<p>This must be called explicitly rather than automatically
+from trimesh.load to ensure users don’t accidentally make
+network requests.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>url</strong> <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd><p class="first last">URL containing mesh file</p>
+</dd>
+<dt><strong>**kwargs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">passed to <cite>load</cite></span></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.load.mesh_formats">
+<code class="descclassname">trimesh.io.load.</code><code class="descname">mesh_formats</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.load.mesh_formats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of mesh formats</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>loaders</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd><p class="first last">Extensions of available mesh loaders
+i.e. ‘stl’, ‘ply’, etc.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.load.parse_file_args">
+<code class="descclassname">trimesh.io.load.</code><code class="descname">parse_file_args</code><span class="sig-paren">(</span><em>file_obj</em>, <em>file_type</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.load.parse_file_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a file_obj and a file_type try to turn them into a file-like
+object and a lowercase string of file type.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>file_obj:  str: if string represents a file path, returns</strong></dt>
+<dd><blockquote class="first">
+<div><p>file_obj:   an ‘rb’ opened file object of the path
+file_type:  the extension from the file path</p>
+</div></blockquote>
+<dl class="last docutils">
+<dt>str: if string is NOT a path, but has JSON-like special characters</dt>
+<dd><p class="first last">file_obj:   the same string passed as file_obj
+file_type:  set to ‘json’</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>file_obj:  loadable object</strong></dt>
+<dd></dd>
+<dt><strong>file_type: str, lower case of the type of file (eg ‘stl’, ‘dae’, etc)</strong></dt>
+<dd></dd>
+<dt><strong>metadata:  dict, any metadata</strong></dt>
+<dd></dd>
+<dt><strong>opened:    bool, did we open the file or not</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-trimesh.io.misc">
+<span id="trimesh-io-misc-module"></span><h2>trimesh.io.misc module<a class="headerlink" href="#module-trimesh.io.misc" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="trimesh.io.misc.load_dict">
+<code class="descclassname">trimesh.io.misc.</code><code class="descname">load_dict</code><span class="sig-paren">(</span><em>data</em>, <em>file_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.misc.load_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load multiple input types into kwargs for a Trimesh constructor.
+Tries to extract keys [‘faces’, ‘vertices’, ‘face_normals’, ‘vertex_normals’].</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>data: accepts multiple forms</strong></dt>
+<dd><p class="first">-dict: has keys for vertices and faces as (n,3) numpy arrays
+-dict: has keys for vertices/faces (n,3) arrays encoded as dicts/base64</p>
+<blockquote>
+<div><p>with trimesh.util.array_to_encoded/trimesh.util.encoded_to_array</p>
+</div></blockquote>
+<p class="last">-str:  json blob as dict with either straight array or base64 values
+-file object: json blob of dict</p>
+</dd>
+<dt><strong>file_type: not used</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>loaded: dict with keys</strong></dt>
+<dd><p class="first last">-vertices: (n,3) float
+-faces:    (n,3) int
+-face_normals: (n,3) float (optional)</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.misc.load_msgpack">
+<code class="descclassname">trimesh.io.misc.</code><code class="descname">load_msgpack</code><span class="sig-paren">(</span><em>blob</em>, <em>file_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.misc.load_msgpack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a dict packed with msgpack into kwargs for Trimesh constructor</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>blob: msgpack packed dict with keys for ‘vertices’ and ‘faces’</strong></dt>
+<dd></dd>
+<dt><strong>file_type: not used</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>loaded: kwargs for Trimesh constructor (aka mesh=trimesh.Trimesh(**loaded))</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.misc.load_off">
+<code class="descclassname">trimesh.io.misc.</code><code class="descname">load_off</code><span class="sig-paren">(</span><em>file_obj</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.misc.load_off" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load an OFF file into the kwargs for a Trimesh constructor</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>file_obj</strong> <span class="classifier-delimiter">:</span> <span class="classifier">file object</span></dt>
+<dd><p class="first last">Contains an OFF file</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>loaded</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">kwargs for Trimesh constructor</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-trimesh.io.openctm">
+<span id="trimesh-io-openctm-module"></span><h2>trimesh.io.openctm module<a class="headerlink" href="#module-trimesh.io.openctm" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="trimesh.io.openctm.load_ctm">
+<code class="descclassname">trimesh.io.openctm.</code><code class="descname">load_ctm</code><span class="sig-paren">(</span><em>file_obj</em>, <em>file_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.openctm.load_ctm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load OpenCTM files from a file object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>file_obj</strong> <span class="classifier-delimiter">:</span> <span class="classifier">open file- like object</span></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>loaded</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><dl class="first last docutils">
+<dt>kwargs for a Trimesh constructor:</dt>
+<dd><dl class="first last docutils">
+<dt>{vertices: (n,3) float, vertices</dt>
+<dd><p class="first last">faces:    (m,3) int, indexes of vertices}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-trimesh.io.ply">
+<span id="trimesh-io-ply-module"></span><h2>trimesh.io.ply module<a class="headerlink" href="#module-trimesh.io.ply" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="trimesh.io.ply.element_colors">
+<code class="descclassname">trimesh.io.ply.</code><code class="descname">element_colors</code><span class="sig-paren">(</span><em>element</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.ply.element_colors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an element, try to extract RGBA color from its properties
+and return them as an (n,3|4) array.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>element: dict, containing color keys</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>colors: (n,(3|4)</strong></dt>
+<dd></dd>
+<dt><strong>signal: float, estimate of range</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.ply.elements_to_kwargs">
+<code class="descclassname">trimesh.io.ply.</code><code class="descname">elements_to_kwargs</code><span class="sig-paren">(</span><em>elements</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.ply.elements_to_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an elements data structure, extract the keyword
+arguments that a Trimesh object constructor will expect.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>elements: OrderedDict object, with fields and data loaded</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>kwargs: dict, with keys for Trimesh constructor.</strong></dt>
+<dd><p class="first last">eg: mesh = trimesh.Trimesh(<a href="#id1"><span class="problematic" id="id2">**</span></a>kwargs)</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.ply.export_draco">
+<code class="descclassname">trimesh.io.ply.</code><code class="descname">export_draco</code><span class="sig-paren">(</span><em>mesh</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.ply.export_draco" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export a mesh using Google’s Draco compressed format.</p>
+<p>Only works if draco_encoder is in your PATH:
+<a class="reference external" href="https://github.com/google/draco">https://github.com/google/draco</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>mesh</strong> <span class="classifier-delimiter">:</span> <span class="classifier">Trimesh object</span></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>data</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str or bytes, data</span></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.ply.export_ply">
+<code class="descclassname">trimesh.io.ply.</code><code class="descname">export_ply</code><span class="sig-paren">(</span><em>mesh</em>, <em>encoding='binary'</em>, <em>vertex_normal=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.ply.export_ply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export a mesh in the PLY format.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>mesh</strong> <span class="classifier-delimiter">:</span> <span class="classifier">Trimesh object</span></dt>
+<dd></dd>
+<dt><strong>encoding</strong> <span class="classifier-delimiter">:</span> <span class="classifier">[‘ascii’|’binary_little_endian’]</span></dt>
+<dd></dd>
+<dt><strong>vertex_normal</strong> <span class="classifier-delimiter">:</span> <span class="classifier">include vertex normals</span></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>export</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bytes of result</span></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.ply.load_draco">
+<code class="descclassname">trimesh.io.ply.</code><code class="descname">load_draco</code><span class="sig-paren">(</span><em>file_obj</em>, <em>file_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.ply.load_draco" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a mesh from Google’s Draco format.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>file_obj</strong> <span class="classifier-delimiter">:</span> <span class="classifier">open file- like object</span></dt>
+<dd></dd>
+<dt><strong>file_type</strong> <span class="classifier-delimiter">:</span> <span class="classifier">unused</span></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>kwargs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict, kwargs to construct a Trimesh object</span></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.ply.load_ply">
+<code class="descclassname">trimesh.io.ply.</code><code class="descname">load_ply</code><span class="sig-paren">(</span><em>file_obj</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.ply.load_ply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a PLY file from an open file object.</p>
+<p>file_obj : an open file- like object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>mesh_kwargs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dictionary of mesh info which can be passed to</span></dt>
+<dd><p class="first last">Trimesh constructor, eg: a = Trimesh(<a href="#id3"><span class="problematic" id="id4">**</span></a>mesh_kwargs)</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.ply.ply_ascii">
+<code class="descclassname">trimesh.io.ply.</code><code class="descname">ply_ascii</code><span class="sig-paren">(</span><em>elements</em>, <em>file_obj</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.ply.ply_ascii" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load data from an ASCII PLY file into an existing elements data structure.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>elements: OrderedDict object, populated from the file header.</strong></dt>
+<dd><p class="first last">object will be modified to add data by this function.</p>
+</dd>
+<dt><strong>file_obj: open file object, with current position at the start</strong></dt>
+<dd><p class="first last">of the data section (past the header)</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.ply.ply_binary">
+<code class="descclassname">trimesh.io.ply.</code><code class="descname">ply_binary</code><span class="sig-paren">(</span><em>elements</em>, <em>file_obj</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.ply.ply_binary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the data from a binary PLY file into the elements data structure.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>elements: OrderedDict object, populated from the file header.</strong></dt>
+<dd><p class="first last">object will be modified to add data by this function.</p>
+</dd>
+<dt><strong>file_obj: open file object, with current position at the start</strong></dt>
+<dd><p class="first last">of the data section (past the header)</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.ply.read_ply_header">
+<code class="descclassname">trimesh.io.ply.</code><code class="descname">read_ply_header</code><span class="sig-paren">(</span><em>file_obj</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.ply.read_ply_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the ASCII header of a PLY file, and leave the file object
+at the position of the start of data but past the header.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>file_obj: open file object, positioned at the start of the file</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>elements: OrderedDict object, with fields and data types populated</strong></dt>
+<dd></dd>
+<dt><strong>is_ascii: bool, whether the data is ASCII or binary</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-trimesh.io.stl">
+<span id="trimesh-io-stl-module"></span><h2>trimesh.io.stl module<a class="headerlink" href="#module-trimesh.io.stl" title="Permalink to this headline">¶</a></h2>
+<dl class="exception">
+<dt id="trimesh.io.stl.HeaderError">
+<em class="property">exception </em><code class="descclassname">trimesh.io.stl.</code><code class="descname">HeaderError</code><a class="headerlink" href="#trimesh.io.stl.HeaderError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.stl.export_stl">
+<code class="descclassname">trimesh.io.stl.</code><code class="descname">export_stl</code><span class="sig-paren">(</span><em>mesh</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.stl.export_stl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a Trimesh object into a binary STL file.</p>
+<p>mesh: Trimesh object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>export: bytes, representing mesh in binary STL form</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.stl.export_stl_ascii">
+<code class="descclassname">trimesh.io.stl.</code><code class="descname">export_stl_ascii</code><span class="sig-paren">(</span><em>mesh</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.stl.export_stl_ascii" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a Trimesh object into an ASCII STL file.</p>
+<p>mesh : trimesh.Trimesh</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>export</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Mesh represented as an ASCII STL file</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.stl.load_stl">
+<code class="descclassname">trimesh.io.stl.</code><code class="descname">load_stl</code><span class="sig-paren">(</span><em>file_obj</em>, <em>file_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.stl.load_stl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load an STL file from a file object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>file_obj: open file- like object</strong></dt>
+<dd></dd>
+<dt><strong>file_type: not used</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>loaded: kwargs for a Trimesh constructor with keys:</strong></dt>
+<dd><p class="first last">vertices:     (n,3) float, vertices
+faces:        (m,3) int, indexes of vertices
+face_normals: (m,3) float, normal vector of each face</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.stl.load_stl_ascii">
+<code class="descclassname">trimesh.io.stl.</code><code class="descname">load_stl_ascii</code><span class="sig-paren">(</span><em>file_obj</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.stl.load_stl_ascii" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load an ASCII STL file from a file object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>file_obj: open file- like object</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>loaded: kwargs for a Trimesh constructor with keys:</strong></dt>
+<dd><p class="first last">vertices:     (n,3) float, vertices
+faces:        (m,3) int, indexes of vertices
+face_normals: (m,3) float, normal vector of each face</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.stl.load_stl_binary">
+<code class="descclassname">trimesh.io.stl.</code><code class="descname">load_stl_binary</code><span class="sig-paren">(</span><em>file_obj</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.stl.load_stl_binary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a binary STL file from a file object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>file_obj: open file- like object</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>loaded: kwargs for a Trimesh constructor with keys:</strong></dt>
+<dd><p class="first last">vertices:     (n,3) float, vertices
+faces:        (m,3) int, indexes of vertices
+face_normals: (m,3) float, normal vector of each face</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-trimesh.io.threemf">
+<span id="trimesh-io-threemf-module"></span><h2>trimesh.io.threemf module<a class="headerlink" href="#module-trimesh.io.threemf" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="trimesh.io.threemf.load_3MF">
+<code class="descclassname">trimesh.io.threemf.</code><code class="descname">load_3MF</code><span class="sig-paren">(</span><em>file_obj</em>, <em>postprocess=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.threemf.load_3MF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a 3MF formatted file into a Trimesh scene.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>file_obj:       file object</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>kwargs: dict, with keys ‘graph’, ‘geometry’, ‘base_frame’</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-trimesh.io.urdf">
+<span id="trimesh-io-urdf-module"></span><h2>trimesh.io.urdf module<a class="headerlink" href="#module-trimesh.io.urdf" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="trimesh.io.urdf.export_urdf">
+<code class="descclassname">trimesh.io.urdf.</code><code class="descname">export_urdf</code><span class="sig-paren">(</span><em>mesh, directory, scale=1.0, color=[0.75, 0.75, 0.75], **kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.urdf.export_urdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a Trimesh object into a URDF package for physics simulation.
+This breaks the mesh into convex pieces and writes them to the same
+directory as the .urdf file.</p>
+<p>mesh      : Trimesh object
+directory : str</p>
+<blockquote>
+<div>The directory path for the URDF package</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>mesh</strong> <span class="classifier-delimiter">:</span> <span class="classifier">Trimesh object</span></dt>
+<dd><p class="first last">Multi-body mesh containing convex decomposition</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-trimesh.io.wavefront">
+<span id="trimesh-io-wavefront-module"></span><h2>trimesh.io.wavefront module<a class="headerlink" href="#module-trimesh.io.wavefront" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="trimesh.io.wavefront.export_wavefront">
+<code class="descclassname">trimesh.io.wavefront.</code><code class="descname">export_wavefront</code><span class="sig-paren">(</span><em>mesh</em>, <em>include_normals=True</em>, <em>include_texture=True</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.wavefront.export_wavefront" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export a mesh as a Wavefront OBJ file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>mesh: Trimesh object</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>export: str, string of OBJ format output</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.wavefront.load_wavefront">
+<code class="descclassname">trimesh.io.wavefront.</code><code class="descname">load_wavefront</code><span class="sig-paren">(</span><em>file_obj</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.wavefront.load_wavefront" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads an ascii Wavefront OBJ file_obj into kwargs
+for the Trimesh constructor.</p>
+<p>Vertices with the same position but different normals or uvs
+are split into multiple vertices.</p>
+<p>Colors are discarded.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>file_obj</strong> <span class="classifier-delimiter">:</span> <span class="classifier">file object</span></dt>
+<dd><p class="first last">Containing a wavefront file</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>loaded</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">kwargs for Trimesh constructor</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-trimesh.io.xml_based">
+<span id="trimesh-io-xml-based-module"></span><h2>trimesh.io.xml_based module<a class="headerlink" href="#module-trimesh.io.xml_based" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="trimesh.io.xml_based.load_3DXML">
+<code class="descclassname">trimesh.io.xml_based.</code><code class="descname">load_3DXML</code><span class="sig-paren">(</span><em>file_obj</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.xml_based.load_3DXML" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a 3DXML scene into kwargs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>file_obj</strong> <span class="classifier-delimiter">:</span> <span class="classifier">file object</span></dt>
+<dd><p class="first last">open, containing 3DXML</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>geometries</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list of dict</span></dt>
+<dd><p class="first last">kwargs for Trimesh constructor</p>
+</dd>
+<dt><strong>graph</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list of dict</span></dt>
+<dd><p class="first last">kwargs for Scene.graph.update</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.xml_based.load_XAML">
+<code class="descclassname">trimesh.io.xml_based.</code><code class="descname">load_XAML</code><span class="sig-paren">(</span><em>file_obj</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.xml_based.load_XAML" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a 3D XAML file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>file_obj</strong> <span class="classifier-delimiter">:</span> <span class="classifier">file object</span></dt>
+<dd><p class="first last">Open, containing XAML file</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>result</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">kwargs for a trimesh constructor, including:
+vertices:       (n,3) np.float64, points in space
+faces:          (m,3) np.int64, indices of vertices
+face_colors:    (m,4) np.uint8, RGBA colors
+vertex_normals: (n,3) np.float64, vertex normals</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trimesh.io.xml_based.print_element">
+<code class="descclassname">trimesh.io.xml_based.</code><code class="descname">print_element</code><span class="sig-paren">(</span><em>element</em><span class="sig-paren">)</span><a class="headerlink" href="#trimesh.io.xml_based.print_element" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pretty- print an lxml.etree element.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>element</strong> <span class="classifier-delimiter">:</span> <span class="classifier">etree element</span></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-trimesh.io">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-trimesh.io" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="trimesh.path.html" class="btn btn-neutral float-right" title="trimesh.path package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="trimesh.interfaces.html" class="btn btn-neutral" title="trimesh.interfaces package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Michael Dawson-Haggerty.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.33.43',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
